@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: faceswap.spanish\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 01:34+0000\n"
-"PO-Revision-Date: 2023-06-02 17:19+0800\n"
+"PO-Revision-Date: 2023-06-06 09:36+0800\n"
 "Last-Translator: \n"
 "Language-Team: tokafondo\n"
-"Language: es\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: pygettext.py 1.5\n"
 "X-Generator: Poedit 2.2\n"
 
@@ -423,30 +423,6 @@ msgid ""
 "L|predicted: If the 'Learn Mask' option was enabled during training, this will use "
 "the mask that was created by the trained model."
 msgstr ""
-"R|对交换的面执行颜色调整。其中一些选项在“/config/convert.ini”或“配置转换插件>设置”中具"
-"有可配置的设置：\n"
-"L|avg-color：调整交换重建中每个颜色通道的平均值，使其等于原始图像中遮罩区域的平均"
-"值。\n"
-"L|颜色转移：使用 L*a*b* 颜色空间的平均值和标准偏差将颜色分布从源传输到目标图像。\n"
-"L|手动平衡：在各种色彩空间中手动调整图像的平衡。最好与预览工具一起使用，以设置正确的"
-"值。\n"
-"L|match-hist：调整交换重建中每个颜色通道的直方图，使其等于原始图像中遮罩区域的直方"
-"图。\n"
-"L|无缝克隆：使用 cv2 的无缝克隆功能，通过平滑颜色来消除遮罩接缝处的极端渐变。一般不会"
-"给出非常令人满意的结果。\n"
-"L|none：不执行颜色调整。"
-
-#: lib\cli\args.py:762
-msgid ""
-"R|The plugin to use to output the converted images. The writers are configurable in '/"
-"config/convert.ini' or 'Settings > Configure Convert Plugins:'\n"
-"L|ffmpeg: [video] Writes out the convert straight to video. When the input is a "
-"series of images then the '-ref' (--reference-video) parameter must be set.\n"
-"L|gif: [animated image] Create an animated gif.\n"
-"L|opencv: [images] The fastest image writer, but less options and formats than other "
-"plugins.\n"
-"L|pillow: [images] Slower than opencv, but has more options and supports more formats."
-msgstr ""
 "R|要使用的掩码器。注意：您需要的掩码必须存在于对齐文件中。您可以使用蒙版工具添加其他蒙"
 "版。\n"
 "L|none：不要使用口罩。\n"
@@ -469,8 +445,16 @@ msgstr ""
 "进一步描述。轮廓面可能会导致性能不佳。\n"
 "L|predicted：如果在训练期间启用了“学习掩码”选项，这将使用由训练模型创建的掩码。"
 
-#: lib\cli\args.py:781 lib\cli\args.py:788 lib\cli\args.py:882
-msgid "Frame Processing"
+#: lib\cli\args.py:762
+msgid ""
+"R|The plugin to use to output the converted images. The writers are configurable in '/"
+"config/convert.ini' or 'Settings > Configure Convert Plugins:'\n"
+"L|ffmpeg: [video] Writes out the convert straight to video. When the input is a "
+"series of images then the '-ref' (--reference-video) parameter must be set.\n"
+"L|gif: [animated image] Create an animated gif.\n"
+"L|opencv: [images] The fastest image writer, but less options and formats than other "
+"plugins.\n"
+"L|pillow: [images] Slower than opencv, but has more options and supports more formats."
 msgstr ""
 "R|用于输出转换后的图像的插件。编写器可在“/config/convert.ini”或“配置转换插件>设置：”中"
 "进行配置\n"
@@ -480,12 +464,16 @@ msgstr ""
 "L|opencv：[images]最快的图像编写器，但选项和格式比其他插件少。\n"
 "L|pillow： [图片] 比opencv慢，但有更多的选择，支持更多的格式。"
 
+#: lib\cli\args.py:781 lib\cli\args.py:788 lib\cli\args.py:882
+msgid "Frame Processing"
+msgstr "帧处理"
+
 #: lib\cli\args.py:782
 #, python-format
 msgid ""
 "Scale the final output frames by this amount. 100%% will output the frames at source "
 "dimensions. 50%% at half size 200%% at double size"
-msgstr "帧处理"
+msgstr "按此量缩放最终输出帧。100%% 将以源尺寸输出帧。半码时为 50%% 双倍码时为 200%%"
 
 #: lib\cli\args.py:789
 msgid ""
@@ -493,7 +481,10 @@ msgid ""
 "ranges 10-50 90-100. Frames falling outside of the selected range will be discarded "
 "unless '-k' (--keep-unchanged) is selected. NB: If you are converting from images, "
 "then the filenames must end with the frame-number!"
-msgstr "按此量缩放最终输出帧。100%% 将以源尺寸输出帧。半码时为 50%% 双倍码时为 200%%"
+msgstr ""
+"要应用传输的帧范围，例如，对于帧 10 到 50 和 90 到 100，请使用 --帧范围 10-50 90-100。"
+"超出所选范围的帧将被丢弃，除非选择了“-k”（--keep-unchanged）。注意：如果要从图像转换，"
+"则文件名必须以帧号结尾！"
 
 #: lib\cli\args.py:799
 msgid ""
@@ -503,9 +494,9 @@ msgid ""
 "also exist within the specified folder will be converted. Leaving this blank will "
 "convert all faces that exist within the alignments file."
 msgstr ""
-"要应用传输的帧范围，例如，对于帧 10 到 50 和 90 到 100，请使用 --帧范围 10-50 90-100。"
-"超出所选范围的帧将被丢弃，除非选择了“-k”（--keep-unchanged）。注意：如果要从图像转换，"
-"则文件名必须以帧号结尾！"
+"如果您尚未清理对齐文件，则可以通过在此处定义一个文件夹来过滤掉人脸，该文件夹包含从输入"
+"文件/视频中提取的人脸。如果定义了此文件夹，则只会转换存在于对齐文件中且也存在于指定文"
+"件夹中的面。将此留空将转换对齐文件中存在的所有面。"
 
 #: lib\cli\args.py:813
 msgid ""
@@ -514,9 +505,9 @@ msgid ""
 "images can be added space separated. NB: Using face filter will significantly "
 "decrease extraction speed and its accuracy cannot be guaranteed."
 msgstr ""
-"如果您尚未清理对齐文件，则可以通过在此处定义一个文件夹来过滤掉人脸，该文件夹包含从输入"
-"文件/视频中提取的人脸。如果定义了此文件夹，则只会转换存在于对齐文件中且也存在于指定文"
-"件夹中的面。将此留空将转换对齐文件中存在的所有面。"
+"（可选）通过传入此人的图像来过滤掉您不希望处理的人员。应该是图像中只有一个人的正面肖"
+"像。多个图像可以添加间隔空间。注意：使用面部过滤器会显着降低提取速度，并且无法保证其准"
+"确性。"
 
 #: lib\cli\args.py:826
 msgid ""
@@ -525,9 +516,8 @@ msgid ""
 "added space separated. NB: Using face filter will significantly decrease extraction "
 "speed and its accuracy cannot be guaranteed."
 msgstr ""
-"（可选）通过传入此人的图像来过滤掉您不希望处理的人员。应该是图像中只有一个人的正面肖"
-"像。多个图像可以添加间隔空间。注意：使用面部过滤器会显着降低提取速度，并且无法保证其准"
-"确性。"
+"（可选）通过传入此人的图像来选择要处理的人员。应该是图像中只有一个人的正面肖像。多个图"
+"像可以添加间隔空间。注意：使用面部过滤器会显着降低提取速度，并且无法保证其准确性。"
 
 #: lib\cli\args.py:840
 msgid ""
@@ -535,8 +525,8 @@ msgid ""
 "recognition. Lower values are stricter. NB: Using face filter will significantly "
 "decrease extraction speed and its accuracy cannot be guaranteed."
 msgstr ""
-"（可选）通过传入此人的图像来选择要处理的人员。应该是图像中只有一个人的正面肖像。多个图"
-"像可以添加间隔空间。注意：使用面部过滤器会显着降低提取速度，并且无法保证其准确性。"
+"用于可选的 nfilter/filter 文件。正面人脸识别的阈值。值越低越严格。注意：使用面部过滤器"
+"会显着降低提取速度，并且无法保证其准确性。"
 
 #: lib\cli\args.py:853
 msgid ""
@@ -547,17 +537,15 @@ msgid ""
 "processes than are available on your system. If singleprocess is enabled this setting "
 "will be ignored."
 msgstr ""
-"用于可选的 nfilter/filter 文件。正面人脸识别的阈值。值越低越严格。注意：使用面部过滤器"
-"会显着降低提取速度，并且无法保证其准确性。"
+"用于执行转换的最大并行进程数。转换图像是系统RAM繁重，因此如果您有很多进程并且没有足够"
+"的RAM来容纳它们，则可能会耗尽内存。将此设置为 0 将使用可用的最大值。无论您将其设置为什"
+"么，它都不会尝试使用比系统上可用的进程更多的进程。如果启用了单进程，则将忽略此设置。"
 
 #: lib\cli\args.py:864
 msgid ""
 "[LEGACY] This only needs to be selected if a legacy model is being loaded or if there "
 "are multiple models in the model folder"
-msgstr ""
-"用于执行转换的最大并行进程数。转换图像是系统RAM繁重，因此如果您有很多进程并且没有足够"
-"的RAM来容纳它们，则可能会耗尽内存。将此设置为 0 将使用可用的最大值。无论您将其设置为什"
-"么，它都不会尝试使用比系统上可用的进程更多的进程。如果启用了单进程，则将忽略此设置。"
+msgstr "[遗产]仅当正在加载旧模型或模型文件夹中有多个模型时，才需要选择此选项"
 
 #: lib\cli\args.py:872
 msgid ""
@@ -566,56 +554,56 @@ msgid ""
 "on-the-fly by enabling this option. This will use an inferior extraction pipeline and "
 "will lead to substandard results. If an alignments file is found, this option will be "
 "ignored."
-msgstr "[遗产]仅当正在加载旧模型或模型文件夹中有多个模型时，才需要选择此选项"
-
-#: lib\cli\args.py:883
-msgid ""
-"When used with --frame-ranges outputs the unchanged frames that are not processed "
-"instead of discarding them."
 msgstr ""
 "启用即时转换。不推荐。您应该为目标视频生成一个干净的对齐文件。但是，如果您愿意，可以通"
 "过启用此选项来动态生成对齐方式。这将使用劣质提取管道，并将导致不合格的结果。如果找到对"
 "齐文件，将忽略此选项。"
 
+#: lib\cli\args.py:883
+msgid ""
+"When used with --frame-ranges outputs the unchanged frames that are not processed "
+"instead of discarding them."
+msgstr "当与 --frame-range 一起使用时，会输出未处理的未处理的未更改帧，而不是丢弃它们。"
+
 #: lib\cli\args.py:891
 msgid "Swap the model. Instead converting from of A -> B, converts B -> A"
-msgstr "当与 --frame-range 一起使用时，会输出未处理的未处理的未更改帧，而不是丢弃它们。"
+msgstr "交换模型。而不是从 A -> B 转换，转换 B -> A"
 
 #: lib\cli\args.py:897
 msgid "Disable multiprocessing. Slower but less resource intensive."
-msgstr "交换模型。而不是从 A -> B 转换，转换 B -> A"
+msgstr "禁用多处理。速度较慢，但资源密集度较低。"
 
 #: lib\cli\args.py:913
 msgid ""
 "Train a model on extracted original (A) and swap (B) faces.\n"
 "Training models can take a long time. Anything from 24hrs to over a week\n"
 "Model plugins can be configured in the 'Settings' Menu"
-msgstr "禁用多处理。速度较慢，但资源密集度较低。"
-
-#: lib\cli\args.py:932 lib\cli\args.py:941
-msgid "faces"
 msgstr ""
 "在提取的原始 （A） 和交换 （B） 面上训练模型。\n"
 "训练模型可能需要很长时间。从24小时到一周以上的任何时间\n"
 "模型插件可以在“设置”菜单中配置"
 
+#: lib\cli\args.py:932 lib\cli\args.py:941
+msgid "faces"
+msgstr "脸型"
+
 #: lib\cli\args.py:933
 msgid ""
 "Input directory. A directory containing training images for face A. This is the "
 "original face, i.e. the face that you want to remove and replace with face B."
-msgstr "面临"
+msgstr ""
+"输入目录。包含人脸 A 的训练图像的目录。这是原始面孔，即您要删除并替换为面 B 的面。"
 
 #: lib\cli\args.py:942
 msgid ""
 "Input directory. A directory containing training images for face B. This is the swap "
 "face, i.e. the face that you want to place onto the head of person A."
-msgstr ""
-"输入目录。包含人脸 A 的训练图像的目录。这是原始面孔，即您要删除并替换为面 B 的面。"
+msgstr "输入目录。包含人脸 B 的训练图像的目录。这是交换脸，即你想放在人A头上的脸。"
 
 #: lib\cli\args.py:950 lib\cli\args.py:962 lib\cli\args.py:978 lib\cli\args.py:1003
 #: lib\cli\args.py:1013
 msgid "model"
-msgstr "输入目录。包含人脸 B 的训练图像的目录。这是交换脸，即你想放在人A头上的脸。"
+msgstr "模型"
 
 #: lib\cli\args.py:951
 msgid ""
@@ -623,7 +611,9 @@ msgid ""
 "specify a new folder for new models. If starting a new model, select either an empty "
 "folder, or a folder which does not exist (which will be created). If continuing to "
 "train an existing model, specify the location of the existing model."
-msgstr "型"
+msgstr ""
+"模型目录。这是存储训练数据的位置。应始终为新模型指定新文件夹。如果启动新模型，请选择空"
+"文件夹或不存在的文件夹（将创建该文件夹）。如果继续训练现有模型，请指定现有模型的位置。"
 
 #: lib\cli\args.py:963
 msgid ""
@@ -636,8 +626,11 @@ msgid ""
 "catches up with your Encoder.\n"
 "NB: Weights can only be loaded from models of the same plugin as you intend to train."
 msgstr ""
-"模型目录。这是存储训练数据的位置。应始终为新模型指定新文件夹。如果启动新模型，请选择空"
-"文件夹或不存在的文件夹（将创建该文件夹）。如果继续训练现有模型，请指定现有模型的位置。"
+"R|将权重从预先存在的模型加载到新创建的模型中。对于大多数模型，这会将权重从给定模型的编"
+"码器加载到新创建的模型的编码器中。某些插件可能具有特定的配置选项，允许您从其他层加载权"
+"重。权重仅在创建新模型时加载。如果要恢复现有模型，将忽略此选项。通常，您还需要“冻结重"
+"量”，而模型的其余部分则赶上您的编码器。\n"
+"注意：权重只能从您打算训练的同一插件的模型中加载。"
 
 #: lib\cli\args.py:979
 msgid ""
@@ -661,18 +654,6 @@ msgid ""
 "a GPU with a fair amount of VRAM). Good for details, but more susceptible to color "
 "differences."
 msgstr ""
-"R|将权重从预先存在的模型加载到新创建的模型中。对于大多数模型，这会将权重从给定模型的编"
-"码器加载到新创建的模型的编码器中。某些插件可能具有特定的配置选项，允许您从其他层加载权"
-"重。权重仅在创建新模型时加载。如果要恢复现有模型，将忽略此选项。通常，您还需要“冻结重"
-"量”，而模型的其余部分则赶上您的编码器。\n"
-"注意：权重只能从您打算训练的同一插件的模型中加载。"
-
-#: lib\cli\args.py:1004
-msgid ""
-"Output a summary of the model and exit. If a model folder is provided then a summary "
-"of the saved model is displayed. Otherwise a summary of the model that would be "
-"created by the chosen plugin and configuration settings is displayed."
-msgstr ""
 "R|选择要使用的培训师。可以从“设置”菜单或配置文件夹配置训练器。\n"
 "L|original：由 /u/deepfakes 创建的原始模型。\n"
 "L|dfaker：来自 dfaker 的 64px in/128px 输出模型。启用“变形到地标”以获得完整的伪造方"
@@ -690,6 +671,15 @@ msgstr ""
 "L|反派：128px输入/输出模型来自反派。非常耗费资源（您将需要一个具有相当数量的 VRAM 的 "
 "GPU）。适合细节，但更容易出现色差。"
 
+#: lib\cli\args.py:1004
+msgid ""
+"Output a summary of the model and exit. If a model folder is provided then a summary "
+"of the saved model is displayed. Otherwise a summary of the model that would be "
+"created by the chosen plugin and configuration settings is displayed."
+msgstr ""
+"输出模型摘要并退出。如果提供了模型文件夹，则会显示已保存模型的摘要。否则，将显示所选插"
+"件和配置设置将创建的模型的摘要。"
+
 #: lib\cli\args.py:1014
 msgid ""
 "Freeze the weights of the model. Freezing weights means that some of the parameters "
@@ -697,15 +687,13 @@ msgid ""
 "continue to learn. For most models, this will freeze the encoder, but some models may "
 "have configuration options for freezing other layers."
 msgstr ""
-"输出模型摘要并退出。如果提供了模型文件夹，则会显示已保存模型的摘要。否则，将显示所选插"
-"件和配置设置将创建的模型的摘要。"
+"冻结模型的权重。冻结权重意味着模型中的一些参数将不再继续学习，但那些未冻结的参数将继续"
+"学习。对于大多数模型，这将冻结编码器，但有些模型可能有冻结其他层的配置选项。"
 
 #: lib\cli\args.py:1027 lib\cli\args.py:1039 lib\cli\args.py:1050 lib\cli\args.py:1061
 #: lib\cli\args.py:1144
 msgid "training"
-msgstr ""
-"冻结模型的权重。冻结权重意味着模型中的某些参数将不再继续学习，但那些未冻结的参数将继续"
-"学习。对于大多数型号，这将冻结编码器，但某些型号可能具有用于冻结其他图层的配置选项。"
+msgstr "训练"
 
 #: lib\cli\args.py:1028
 msgid ""
@@ -713,7 +701,10 @@ msgid ""
 "per iteration. NB: As the model is fed 2 sides at a time, the actual number of images "
 "within the model at any one time is double the number that you set here. Larger "
 "batches require more GPU RAM."
-msgstr "训练"
+msgstr ""
+"批量大小。这是每次迭代通过模型处理的每一侧的图像数。注意：由于模型一次馈送 2 个边，因"
+"此模型内在任何时候的实际图像数量都是您在此处设置的数量的两倍。较大的批次需要更多的 "
+"GPU RAM。"
 
 #: lib\cli\args.py:1040
 msgid ""
@@ -722,17 +713,16 @@ msgid ""
 "training when you are happy with the previews. However, if you want the model to stop "
 "automatically at a set number of iterations, you can set that value here."
 msgstr ""
-"批量大小。这是每次迭代通过模型处理的每一侧的图像数。注意：由于模型一次馈送 2 个边，因"
-"此模型内在任何时候的实际图像数量都是您在此处设置的数量的两倍。较大的批次需要更多的 "
-"GPU RAM。"
+"迭代中的训练长度。这仅用于自动化。模型没有“正确”的迭代次数。当您对预览感到满意时，您应"
+"该停止训练。但是，如果希望模型在设定的迭代次数时自动停止，则可以在此处设置该值。"
 
 #: lib\cli\args.py:1051
 msgid ""
 "[Deprecated - Use '-D, --distribution-strategy' instead] Use the Tensorflow Mirrored "
 "Distrubution Strategy to train on multiple GPUs."
 msgstr ""
-"迭代中的训练长度。这仅用于自动化。模型没有“正确”的迭代次数。当您对预览感到满意时，您应"
-"该停止训练。但是，如果希望模型在设定的迭代次数时自动停止，则可以在此处设置该值。"
+"[已弃用 - 改用“-D， --distribution-strategy”]使用 Tensorflow 镜像分发策略在多个 GPU 上"
+"进行训练。"
 
 #: lib\cli\args.py:1062
 msgid ""
@@ -746,18 +736,6 @@ msgid ""
 "copy of the model and all variables are loaded onto each GPU with batches distributed "
 "to each GPU at each iteration."
 msgstr ""
-"迭代中的训练长度。这仅用于自动化。模型没有“正确”的迭代次数。当您对预览感到满意时，您应"
-"该停止训练。但是，如果希望模型在设定的迭代次数时自动停止，则可以在此处设置该值。"
-
-#: lib\cli\args.py:1079 lib\cli\args.py:1089
-msgid "Saving"
-msgstr ""
-"[已弃用 - 改用“-D， --distribution-strategy”]使用 Tensorflow 镜像分发策略在多个 GPU 上"
-"进行训练。"
-
-#: lib\cli\args.py:1080
-msgid "Sets the number of iterations between each model save."
-msgstr ""
 "R|选择要使用的分发策略。\n"
 "L|default：使用 Tensorflow 的默认分布策略。\n"
 "L|中央存储：将变量集中在 CPU 上，同时在 1 个或多个本地 GPU 上执行操作。这可以通过不在 "
@@ -765,15 +743,23 @@ msgstr ""
 "L|镜像：支持跨多个本地 GPU 的同步分布式训练。模型的副本和所有变量加载到每个 GPU 上，并"
 "在每次迭代时批量分发到每个 GPU。"
 
+#: lib\cli\args.py:1079 lib\cli\args.py:1089
+msgid "Saving"
+msgstr "储蓄"
+
+#: lib\cli\args.py:1080
+msgid "Sets the number of iterations between each model save."
+msgstr "设置每个模型保存之间的迭代次数。"
+
 #: lib\cli\args.py:1090
 msgid ""
 "Sets the number of iterations before saving a backup snapshot of the model in it's "
 "current state. Set to 0 for off."
-msgstr "储蓄"
+msgstr "设置将模型的备份快照保存为当前状态之前的迭代次数。设置为 0 表示关闭。"
 
 #: lib\cli\args.py:1097 lib\cli\args.py:1108 lib\cli\args.py:1119
 msgid "timelapse"
-msgstr "设置每个模型保存之间的迭代次数。"
+msgstr "延时摄影"
 
 #: lib\cli\args.py:1098
 msgid ""
@@ -781,7 +767,10 @@ msgid ""
 "faces into the timelapse-output folder at every save iteration. This should be the "
 "input folder of 'A' faces that you would like to use for creating the timelapse. You "
 "must also supply a --timelapse-output and a --timelapse-input-B parameter."
-msgstr "设置将模型的备份快照保存为当前状态之前的迭代次数。设置为 0 表示关闭。"
+msgstr ""
+"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
+"夹中。这应该是您要用于创建延时摄影的“A”面的输入文件夹。还必须提供 --timelapse-output "
+"和 --timelapse-input-B 参数。"
 
 #: lib\cli\args.py:1109
 msgid ""
@@ -789,7 +778,10 @@ msgid ""
 "faces into the timelapse-output folder at every save iteration. This should be the "
 "input folder of 'B' faces that you would like to use for creating the timelapse. You "
 "must also supply a --timelapse-output and a --timelapse-input-A parameter."
-msgstr "延时摄影"
+msgstr ""
+"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
+"夹中。这应该是您要用于创建延时摄影的“B”面的输入文件夹。还必须提供 --timelapse-output "
+"和 --timelapse-input-A 参数。"
 
 #: lib\cli\args.py:1120
 msgid ""
@@ -798,58 +790,56 @@ msgid ""
 "are supplied but no output folder, it will default to your model folder /timelapse/"
 msgstr ""
 "可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
-"夹中。这应该是您要用于创建延时摄影的“A”面的输入文件夹。还必须提供 --timelapse-output "
-"和 --timelapse-input-B 参数。"
+"夹中。如果提供了输入文件夹但没有输出文件夹，它将默认为模型文件夹 /timelapse/"
 
 #: lib\cli\args.py:1129 lib\cli\args.py:1136
 msgid "preview"
-msgstr ""
-"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
-"夹中。这应该是您要用于创建延时摄影的“B”面的输入文件夹。还必须提供 --timelapse-output "
-"和 --timelapse-input-A 参数。"
+msgstr "预览"
 
 #: lib\cli\args.py:1130
 msgid "Show training preview output. in a separate window."
-msgstr ""
-"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
-"夹中。如果提供了输入文件夹但没有输出文件夹，它将默认为模型文件夹 /timelapse/"
+msgstr "显示训练预览输出。在单独的窗口中。"
 
 #: lib\cli\args.py:1137
 msgid ""
 "Writes the training result to a file. The image will be stored in the root of your "
 "FaceSwap folder."
-msgstr "预览"
+msgstr "将训练结果写入文件。图像将存储在FaceSwap文件夹的根目录中。"
 
 #: lib\cli\args.py:1145
 msgid ""
 "Disables TensorBoard logging. NB: Disabling logs means that you will not be able to "
 "use the graph or analysis for this session in the GUI."
-msgstr "显示训练预览输出。在单独的窗口中。"
+msgstr ""
+"禁用张量板日志记录。注意：禁用日志意味着您将无法在 GUI 中使用此会话的图形或分析。"
 
 #: lib\cli\args.py:1152 lib\cli\args.py:1161 lib\cli\args.py:1170 lib\cli\args.py:1179
 msgid "augmentation"
-msgstr "将训练结果写入文件。图像将存储在FaceSwap文件夹的根目录中。"
+msgstr "增大"
 
 #: lib\cli\args.py:1153
 msgid ""
 "Warps training faces to closely matched Landmarks from the opposite face-set rather "
 "than randomly warping the face. This is the 'dfaker' way of doing warping."
-msgstr ""
-"禁用张量板日志记录。注意：禁用日志意味着您将无法在 GUI 中使用此会话的图形或分析。"
+msgstr "将训练面扭曲到与对面紧密匹配的地标，而不是随机扭曲面。这是“伪造者”的翘曲方式。"
 
 #: lib\cli\args.py:1162
 msgid ""
 "To effectively learn, a random set of images are flipped horizontally. Sometimes it "
 "is desirable for this not to occur. Generally this should be left off except for "
 "during 'fit training'."
-msgstr "增大"
+msgstr ""
+"为了有效地学习，一组随机的图像被水平翻转。有时不发生这种情况是可取的。一般来说，除了"
+"在“健身训练”期间，这个动作应该停止。"
 
 #: lib\cli\args.py:1171
 msgid ""
 "Color augmentation helps make the model less susceptible to color differences between "
 "the A and B sets, at an increased training time cost. Enable this option to disable "
 "color augmentation."
-msgstr "将训练面扭曲到与对面紧密匹配的地标，而不是随机扭曲面。这是“伪造者”的翘曲方式。"
+msgstr ""
+"颜色增强有助于使模型不易受到 A 和 B 集之间色差的影响，同时增加训练时间成本。启用此选项"
+"可禁用颜色增强。"
 
 #: lib\cli\args.py:1180
 msgid ""
@@ -858,14 +848,13 @@ msgid ""
 "as 'fine-tuning'. Enabling this option from the beginning is likely to kill a model "
 "and lead to terrible results."
 msgstr ""
-"为了有效地学习，一组随机的图像被水平翻转。有时希望不要发生这种情况。一般来说，除了"
-"在“健身训练”期间，这应该被省略。"
+"Warping 是训练神经网络不可或缺的一部分。这一选项只应在培训即将结束时启用，以尽量提供更"
+"多细节。你可以把它想象成“微调”。从一开始就启用这个选项可能会扼杀一个模型，并导致可怕的"
+"结果。"
 
 #: lib\cli\args.py:1205
 msgid "Output to Shell console instead of GUI console"
-msgstr ""
-"颜色增强有助于使模型不易受到 A 和 B 集之间色差的影响，同时增加训练时间成本。启用此选项"
-"可禁用颜色增强。"
+msgstr "输出到Shell控制台而不是GUI控制台"
 
 #~ msgid ""
 #~ "DEPRECATED - This option will be removed in a future update. Path to alignments "
