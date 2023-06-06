@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: faceswap.spanish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-20 23:42+0000\n"
+"PO-Revision-Date: 2023-06-02 17:20+0800\n"
+"Last-Translator: \n"
+"Language-Team: tokafondo\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+
+#: tools\mask\cli.py:15
+msgid "This command lets you generate masks for existing alignments."
+msgstr "此命令允许您为现有路线生成蒙版。"
+
+#: tools\mask\cli.py:24
+msgid ""
+"Mask tool\n"
+"Generate masks for existing alignments files."
+msgstr ""
+"蒙版工具\n"
+"为现有对齐文件生成掩码。"
+
+#: tools\mask\cli.py:33 tools\mask\cli.py:44 tools\mask\cli.py:54 tools\mask\cli.py:64
+msgid "data"
+msgstr "数据"
+
+#: tools\mask\cli.py:36
+msgid ""
+"Full path to the alignments file to add the mask to if not at the default location. NB: "
+"If the input-type is faces and you wish to update the corresponding alignments file, "
+"then you must provide a value here as the location cannot be automatically detected."
+msgstr ""
+"要将掩码添加到的对齐文件的完整路径（如果不在默认位置）。注意：如果输入类型是面，并且您希"
+"望更新相应的对齐文件，则必须在此处提供一个值，因为无法自动检测到该位置。"
+
+#: tools\mask\cli.py:47
+msgid "Directory containing extracted faces, source frames, or a video file."
+msgstr "包含提取的人脸、源帧或视频文件的目录。"
+
+#: tools\mask\cli.py:56
+msgid ""
+"R|Whether the `input` is a folder of faces or a folder frames/video\n"
+"L|faces: The input is a folder containing extracted faces.\n"
+"L|frames: The input is a folder containing frames or is a video"
+msgstr ""
+"R|“输入”是面部文件夹还是文件夹帧/视频\n"
+"L|faces：输入是包含提取的人脸的文件夹。\n"
+"L|帧：输入是包含帧的文件夹或视频"
+
+#: tools\mask\cli.py:65
+msgid ""
+"R|Run the mask tool on multiple sources. If selected then the other options should be "
+"set as follows:\n"
+"L|input: A parent folder containing either all of the video files to be processed, or "
+"containing sub-folders of frames/faces.\n"
+"L|output-folder: If provided, then sub-folders will be created within the given location "
+"to hold the previews for each input.\n"
+"L|alignments: Alignments field will be ignored for batch processing. The alignments "
+"files must exist at the default location (for frames). For batch processing of masks "
+"with 'faces' as the input type, then only the PNG header within the extracted faces will "
+"be updated."
+msgstr ""
+"R|在多个源上运行遮罩工具。如果选中，则应按如下方式设置其他选项：\n"
+"L|input：包含所有要处理的视频文件的父文件夹，或包含帧/面的子文件夹。\n"
+"L|output-folder：如果提供，则将在给定位置创建子文件夹以保存每个输入的预览。\n"
+"L|对齐方式：批处理将忽略对齐方式字段。对齐文件必须存在于默认位置（对于帧）。对于以“人"
+"脸”作为输入类型的掩码的批处理，将仅更新提取人脸中的 PNG 标头。"
+
+#: tools\mask\cli.py:81 tools\mask\cli.py:113
+msgid "process"
+msgstr "过程"
+
+#: tools\mask\cli.py:82
+msgid ""
+"R|Masker to use.\n"
+"L|bisenet-fp: Relatively lightweight NN based mask that provides more refined control "
+"over the area to be masked including full head masking (configurable in mask settings).\n"
+"L|components: Mask designed to provide facial segmentation based on the positioning of "
+"landmark locations. A convex hull is constructed around the exterior of the landmarks to "
+"create a mask.\n"
+"L|custom: A dummy mask that fills the mask area with all 1s or 0s (configurable in "
+"settings). This is only required if you intend to manually edit the custom masks "
+"yourself in the manual tool. This mask does not use the GPU.\n"
+"L|extended: Mask designed to provide facial segmentation based on the positioning of "
+"landmark locations. A convex hull is constructed around the exterior of the landmarks "
+"and the mask is extended upwards onto the forehead.\n"
+"L|vgg-clear: Mask designed to provide smart segmentation of mostly frontal faces clear "
+"of obstructions. Profile faces and obstructions may result in sub-par performance.\n"
+"L|vgg-obstructed: Mask designed to provide smart segmentation of mostly frontal faces. "
+"The mask model has been specifically trained to recognize some facial obstructions "
+"(hands and eyeglasses). Profile faces may result in sub-par performance.\n"
+"L|unet-dfl: Mask designed to provide smart segmentation of mostly frontal faces. The "
+"mask model has been trained by community members and will need testing for further "
+"description. Profile faces may result in sub-par performance."
+msgstr ""
+"R|要使用的掩码器。\n"
+"L|bisenet-fp：相对轻量级的基于 NN 的遮罩，可对要遮罩的区域提供更精细的控制，包括全头遮罩"
+"（可在遮罩设置中配置）。\n"
+"L|components：旨在根据地标位置的位置提供面部分割的面具。在地标的外部周围建造一个凸壳以创"
+"建遮罩。\n"
+"L|custom：一个虚拟蒙版，用所有 1 或 0 填充蒙版区域（可在设置中配置）。仅当您打算在手动工"
+"具中自行手动编辑自定义蒙版时，才需要执行此操作。此掩码不使用 GPU。\n"
+"L|extended：旨在根据地标位置的位置提供面部分割的面具。在地标的外部周围建造了一个凸形的船"
+"体，面罩向上延伸到额头上。\n"
+"L|vgg-clear：面罩旨在为大部分正面面部提供智能分割，清除障碍物。轮廓面和障碍物可能会导致性"
+"能不佳。\n"
+"L|vgg-阻塞：面罩旨在提供大部分正面面部的智能分割。面罩模型经过专门训练，可以识别一些面部"
+"障碍物（手和眼镜）。轮廓面可能会导致性能不佳。\n"
+"L|unet-dfl：面具旨在为大部分正面面部提供智能分割。掩模模型已由社区成员训练，需要测试以进"
+"一步描述。轮廓面可能会导致性能不佳。"
+
+#: tools\mask\cli.py:114
+msgid ""
+"R|Whether to update all masks in the alignments files, only those faces that do not "
+"already have a mask of the given `mask type` or just to output the masks to the `output` "
+"location.\n"
+"L|all: Update the mask for all faces in the alignments file.\n"
+"L|missing: Create a mask for all faces in the alignments file where a mask does not "
+"previously exist.\n"
+"L|output: Don't update the masks, just output them for review in the given output folder."
+msgstr ""
+"R|是更新对齐文件中的所有蒙版，仅更新那些尚未具有给定“蒙版类型”蒙版的面，还是仅将蒙版输出"
+"到“输出”位置。\n"
+"L|all：更新对齐文件中所有面的蒙版。\n"
+"L|missing：为对齐文件中以前不存在蒙版的所有面创建蒙版。\n"
+"L|output：不要更新掩码，只需在给定的输出文件夹中输出它们以供查看。"
+
+#: tools\mask\cli.py:127 tools\mask\cli.py:134 tools\mask\cli.py:147 tools\mask\cli.py:160
+#: tools\mask\cli.py:169
+msgid "output"
+msgstr "输出"
+
+#: tools\mask\cli.py:128
+msgid ""
+"Optional output location. If provided, a preview of the masks created will be output in "
+"the given folder."
+msgstr "可选输出位置。如果提供，创建的蒙版的预览将输出到给定的文件夹中。"
+
+#: tools\mask\cli.py:138
+msgid ""
+"Apply gaussian blur to the mask output. Has the effect of smoothing the edges of the "
+"mask giving less of a hard edge. the size is in pixels. This value should be odd, if an "
+"even number is passed in then it will be rounded to the next odd number. NB: Only "
+"effects the output preview. Set to 0 for off"
+msgstr ""
+"将高斯模糊应用于蒙版输出。具有平滑面罩边缘的效果，从而减少硬边。大小以像素为单位。此值应"
+"该是奇数，如果传入偶数，则它将四舍五入到下一个奇数。注意：仅影响输出预览。设置为 0 表示关"
+"闭"
+
+#: tools\mask\cli.py:151
+msgid ""
+"Helps reduce 'blotchiness' on some masks by making light shades white and dark shades "
+"black. Higher values will impact more of the mask. NB: Only effects the output preview. "
+"Set to 0 for off"
+msgstr ""
+"通过使浅色调为白色，使深色调为黑色，有助于减少某些面膜上的“斑点”。较高的值将影响更多的掩"
+"码。注意：仅影响输出预览。设置为 0 表示关闭"
+
+#: tools\mask\cli.py:161
+msgid ""
+"R|How to format the output when processing is set to 'output'.\n"
+"L|combined: The image contains the face/frame, face mask and masked face.\n"
+"L|masked: Output the face/frame as rgba image with the face masked.\n"
+"L|mask: Only output the mask as a single channel image."
+msgstr ""
+"R|当处理设置为“输出”时，如何格式化输出。\n"
+"L|组合：图像包含面部/框架、面部蒙版和蒙版面部。\n"
+"L|蒙版：将面部/帧输出为 rgba 图像，并遮罩面部。\n"
+"L|mask：仅将遮罩输出为单通道图像。"
+
+#: tools\mask\cli.py:170
+msgid ""
+"R|Whether to output the whole frame or only the face box when using output processing. "
+"Only has an effect when using frames as input."
+msgstr "R|使用输出处理时是输出整个帧还是仅输出面框。仅在使用帧作为输入时起作用。"
+
+#~ msgid ""
+#~ "Full path to the alignments file to add the mask to. NB: if the mask already exists "
+#~ "in the alignments file it will be overwritten."
+#~ msgstr ""
+#~ "Ruta completa del archivo de alineaciones al que se añadirá la máscara. Nota: si la "
+#~ "máscara ya existe en el archivo de alineaciones, se sobrescribirá."

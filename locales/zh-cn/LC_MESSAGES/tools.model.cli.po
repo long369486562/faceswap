@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-28 14:05+0100\n"
+"PO-Revision-Date: 2023-06-02 17:20+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
+
+#: tools\model\cli.py:13
+msgid "This tool lets you perform actions on saved Faceswap models."
+msgstr "此工具可让您对保存的换脸模型执行操作。"
+
+#: tools\model\cli.py:22
+msgid "A tool for performing actions on Faceswap trained model files"
+msgstr "用于对 Faceswap 训练的模型文件执行操作的工具"
+
+#: tools\model\cli.py:33
+msgid ""
+"Model directory. A directory containing the model you wish to perform an action "
+"on."
+msgstr "模型目录。包含要对其执行操作的模型的目录。"
+
+#: tools\model\cli.py:41
+msgid ""
+"R|Choose which action you want to perform.\n"
+"L|'inference' - Create an inference only copy of the model. Strips any layers "
+"from the model which are only required for training. NB: This is for exporting "
+"the model for use in external applications. Inference generated models cannot be "
+"used within Faceswap. See the 'format' option for specifying the model output "
+"format.\n"
+"L|'nan-scan' - Scan the model file for NaNs or Infs (invalid data).\n"
+"L|'restore' - Restore a model from backup."
+msgstr ""
+"R|选择要执行的操作。\n"
+"L|'推理' - 创建模型的仅推理副本。从模型中剥离仅训练所需的任何层。注意：这是用于导"
+"出模型以用于外部应用程序。推理生成的模型不能在Faceswap中使用。请参阅“格式”选项以"
+"指定模型输出格式。\n"
+"L|'nan-scan' - 扫描模型文件中的 NaNs 或 Infs（无效数据）。\n"
+"L|'恢复' - 从备份还原模型。"
+
+#: tools\model\cli.py:55 tools\model\cli.py:66
+msgid "inference"
+msgstr "推理"
+
+#: tools\model\cli.py:56
+msgid ""
+"R|The format to save the model as. Note: Only used for 'inference' job.\n"
+"L|'h5' - Standard Keras H5 format. Does not store any custom layer information. "
+"Layers will need to be loaded from Faceswap to use.\n"
+"L|'saved-model' - Tensorflow's Saved Model format. Contains all information "
+"required to load the model outside of Faceswap."
+msgstr ""
+"R|将模型另存为的格式。注意：仅用于“推理”作业。\n"
+"L|'h5' - 标准 Keras H5 格式。不存储任何自定义图层信息。图层需要从Faceswap加载才能"
+"使用。\n"
+"L|'saved-model' - Tensorflow的Save Model格式。包含将模型加载到面交换外部所需的所"
+"有信息。"
+
+#: tools\model\cli.py:67
+msgid ""
+"Only used for 'inference' job. Generate the inference model for B -> A instead "
+"of A -> B."
+msgstr "仅用于“推理”作业。为 B -> A 而不是 A -> B 生成推理模型。"

@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: faceswap.spanish\n"
+"POT-Creation-Date: 2021-03-22 18:37+0000\n"
+"PO-Revision-Date: 2023-06-02 17:19+0800\n"
+"Last-Translator: \n"
+"Language-Team: tokafondo\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib\gui\command.py:184
+msgid "Output command line options to the console"
+msgstr "将命令行选项输出到控制台"
+
+#: lib\gui\command.py:195
+msgid "Run the {} script"
+msgstr "运行 {} 脚本"
+
+#: lib\gui\control_helper.py:1234
+msgid "Select a folder..."
+msgstr "选择一个文件夹..."
+
+#: lib\gui\control_helper.py:1235 lib\gui\control_helper.py:1236
+msgid "Select a file..."
+msgstr "选择一个文件..."
+
+#: lib\gui\control_helper.py:1237
+msgid "Select a folder of images..."
+msgstr "选择图像文件夹..."
+
+#: lib\gui\control_helper.py:1238
+msgid "Select a video..."
+msgstr "选择一个视频..."
+
+#: lib\gui\control_helper.py:1239
+msgid "Select a model folder..."
+msgstr "选择模型文件夹..."
+
+#: lib\gui\control_helper.py:1240
+msgid "Select one or more files..."
+msgstr "选择一个或多个文件..."
+
+#: lib\gui\control_helper.py:1241
+msgid "Select a file or folder..."
+msgstr "选择文件或文件夹..."
+
+#: lib\gui\control_helper.py:1242
+msgid "Select a save location..."
+msgstr "选择保存位置..."
+
+#: lib\gui\display.py:71
+msgid "Summary statistics for each training session"
+msgstr "每个培训课程的汇总统计数据"
+
+#: lib\gui\display.py:113
+msgid "Preview updates every 5 seconds"
+msgstr "预览每 5 秒更新一次"
+
+#: lib\gui\display.py:122
+msgid "Graph showing Loss vs Iterations"
+msgstr "显示损失与迭代的图表"
+
+#: lib\gui\display.py:125
+msgid "Training preview. Updated on every save iteration"
+msgstr "培训预览。每次保存迭代时更新"
+
+#: lib\gui\display_analysis.py:342
+msgid "Load/Refresh stats for the currently training session"
+msgstr "当前培训课程的加载/刷新统计信息"
+
+#: lib\gui\display_analysis.py:344
+msgid "Clear currently displayed session stats"
+msgstr "清除当前显示的会话统计信息"
+
+#: lib\gui\display_analysis.py:346
+msgid "Save session stats to csv"
+msgstr "将会话统计信息保存到 csv"
+
+#: lib\gui\display_analysis.py:348
+msgid "Load saved session stats"
+msgstr "加载保存的会话统计信息"
+
+#: lib\gui\display_command.py:94
+msgid "Preview updates at every model save. Click to refresh now."
+msgstr "每次保存模型时预览更新。单击以立即刷新。"
+
+#: lib\gui\display_command.py:261
+msgid "Graph updates at every model save. Click to refresh now."
+msgstr "每次保存模型时图形都会更新。单击以立即刷新。"
+
+#: lib\gui\display_command.py:275
+msgid "Display the raw loss data"
+msgstr "显示原始损失数据"
+
+#: lib\gui\display_command.py:287
+msgid "Display the smoothed loss data"
+msgstr "显示平滑的损失数据"
+
+#: lib\gui\display_command.py:294
+msgid "Set the smoothing amount. 0 is no smoothing, 0.99 is maximum smoothing."
+msgstr "设置平滑量。0 表示无平滑，0.99 表示最大平滑。"
+
+#: lib\gui\display_command.py:324
+msgid "Set the number of iterations to display. 0 displays the full session."
+msgstr "设置要显示的迭代次数。0 显示完整会话。"
+
+#: lib\gui\display_page.py:238
+msgid "Save {}(s) to file"
+msgstr "将 {}（s） 保存到文件"
+
+#: lib\gui\display_page.py:250
+msgid "Enable or disable {} display"
+msgstr "启用或禁用 {} 显示"
+
+#: lib\gui\menu.py:32
+msgid "faceswap.dev - Guides and Forum"
+msgstr "faceswap.dev - 指南和论坛"
+
+#: lib\gui\menu.py:33
+msgid "Patreon - Support this project"
+msgstr "Patreon - 支持这个项目"
+
+#: lib\gui\menu.py:34
+msgid "Discord - The FaceSwap Discord server"
+msgstr "不和谐 - FaceSwap 不和谐服务器"
+
+#: lib\gui\menu.py:35
+msgid "Github - Our Source Code"
+msgstr "Github - 我们的源代码"
+
+#: lib\gui\menu.py:527
+msgid "Configure {} settings..."
+msgstr "配置 {} 设置..."
+
+#: lib\gui\menu.py:535
+msgid "Project"
+msgstr "项目"
+
+#: lib\gui\menu.py:535
+msgid "currently selected Task"
+msgstr "当前选定的任务"
+
+#: lib\gui\menu.py:537
+msgid "Reload {} from disk"
+msgstr "从磁盘重新加载 {}"
+
+#: lib\gui\menu.py:539
+msgid "Create a new {}..."
+msgstr "创建一个新的 {}..."
+
+#: lib\gui\menu.py:541
+msgid "Reset {} to default"
+msgstr "将 {} 重置为默认值"
+
+#: lib\gui\menu.py:543
+msgid "Save {}"
+msgstr "保存 {}"
+
+#: lib\gui\menu.py:545
+msgid "Save {} as..."
+msgstr "将 {} 另存为..."
+
+#: lib\gui\menu.py:549
+msgid " from a task or project file"
+msgstr "从任务或项目文件"
+
+#: lib\gui\menu.py:550
+msgid "Load {}..."
+msgstr "加载 {}..."
+
+#: lib\gui\popup_configure.py:209
+msgid "Close without saving"
+msgstr "关闭而不保存"
+
+#: lib\gui\popup_configure.py:210
+msgid "Save this page's config"
+msgstr "保存此页面的配置"
+
+#: lib\gui\popup_configure.py:211
+msgid "Reset this page's config to default values"
+msgstr "将此页面的配置重置为默认值"
+
+#: lib\gui\popup_configure.py:213
+msgid "Save all settings for the currently selected config"
+msgstr "保存当前所选配置的所有设置"
+
+#: lib\gui\popup_configure.py:216
+msgid "Reset all settings for the currently selected config to default values"
+msgstr "将当前所选配置的所有设置重置为默认值"
+
+#: lib\gui\popup_configure.py:538
+msgid "Select a plugin to configure:"
+msgstr "选择要配置的插件："
+
+#: lib\gui\popup_session.py:191
+msgid "Display {}"
+msgstr "显示 {}"
+
+#: lib\gui\popup_session.py:342
+msgid "Refresh graph"
+msgstr "刷新图形"
+
+#: lib\gui\popup_session.py:344
+msgid "Save display data to csv"
+msgstr "将显示数据保存为 csv"
+
+#: lib\gui\popup_session.py:346
+msgid "Number of data points to sample for rolling average"
+msgstr "滚动平均值的采样数据点数"
+
+#: lib\gui\popup_session.py:348
+msgid "Set the smoothing amount. 0 is no smoothing, 0.99 is maximum smoothing"
+msgstr "设置平滑量。0 表示无平滑，0.99 表示最大平滑"
+
+#: lib\gui\popup_session.py:350
+msgid ""
+"Flatten data points that fall more than 1 standard deviation from the mean to "
+"the mean value."
+msgstr "展平从平均值到平均值的偏差超过 1 个标准差的数据点。"
+
+#: lib\gui\popup_session.py:353
+msgid "Display rolling average of the data"
+msgstr "显示数据的滚动平均值"
+
+#: lib\gui\popup_session.py:355
+msgid "Smooth the data"
+msgstr "平滑数据"
+
+#: lib\gui\popup_session.py:357
+msgid "Display raw data"
+msgstr "显示原始数据"
+
+#: lib\gui\popup_session.py:359
+msgid "Display polynormal data trend"
+msgstr "显示多正态数据趋势"
+
+#: lib\gui\popup_session.py:361
+msgid "Set the data to display"
+msgstr "设置要显示的数据"
+
+#: lib\gui\popup_session.py:363
+msgid "Change y-axis scale"
+msgstr "更改 y 轴刻度"

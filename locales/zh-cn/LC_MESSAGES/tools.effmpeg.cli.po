@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: faceswap.spanish\n"
+"POT-Creation-Date: 2021-02-19 16:39+0000\n"
+"PO-Revision-Date: 2023-06-02 17:20+0800\n"
+"Language-Team: tokafondo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_ES\n"
+
+#: tools\effmpeg\cli.py:15
+msgid "This command allows you to easily execute common ffmpeg tasks."
+msgstr "此命令允许您轻松执行常见的 ffmpeg 任务。"
+
+#: tools\effmpeg\cli.py:24
+msgid "A wrapper for ffmpeg for performing image <> video converting."
+msgstr "用于执行图像<>视频转换的 ffmpeg 包装器。"
+
+#: tools\effmpeg\cli.py:51
+msgid ""
+"R|Choose which action you want ffmpeg ffmpeg to do.\n"
+"L|'extract': turns videos into images \n"
+"L|'gen-vid': turns images into videos \n"
+"L|'get-fps' returns the chosen video's fps.\n"
+"L|'get-info' returns information about a video.\n"
+"L|'mux-audio' add audio from one video to another.\n"
+"L|'rescale' resize video.\n"
+"L|'rotate' rotate video.\n"
+"L|'slice' cuts a portion of the video into a separate video file."
+msgstr ""
+"R|选择您希望 ffmpeg ffmpeg 执行的操作。\n"
+"L|'提取'：将视频转换为图像\n"
+"L|'Gen-Vid'：将图像转换为视频\n"
+"L|'get-fps' 返回所选视频的 fps。\n"
+"L|'获取信息“返回有关视频的信息。\n"
+"L|'复用音频' 将音频从一个视频添加到另一个视频。\n"
+"L|'调整缩放“调整视频大小。\n"
+"L|'旋转'旋转视频。\n"
+"L|'切片'将视频的一部分剪切成单独的视频文件。"
+
+#: tools\effmpeg\cli.py:65
+msgid "Input file."
+msgstr "输入文件。"
+
+#: tools\effmpeg\cli.py:66 tools\effmpeg\cli.py:73 tools\effmpeg\cli.py:87
+msgid "data"
+msgstr "数据"
+
+#: tools\effmpeg\cli.py:76
+msgid ""
+"Output file. If no output is specified then: if the output is meant to be a video "
+"then a video called 'out.mkv' will be created in the input directory; if the output "
+"is meant to be a directory then a directory called 'out' will be created inside the "
+"input directory. Note: the chosen output file extension will determine the file "
+"encoding."
+msgstr ""
+"输出文件。如果未指定输出，则：如果输出是视频，则将在输入目录中创建一个名为“out.mkv”的"
+"视频;如果输出是目录，则将在输入目录中创建一个名为“out”的目录。注意：所选的输出文件扩展"
+"名将决定文件编码。"
+
+#: tools\effmpeg\cli.py:89
+msgid "Path to reference video if 'input' was not a video."
+msgstr "引用视频的路径（如果“输入”不是视频）。"
+
+#: tools\effmpeg\cli.py:95 tools\effmpeg\cli.py:105 tools\effmpeg\cli.py:142
+#: tools\effmpeg\cli.py:171
+msgid "output"
+msgstr "输出"
+
+#: tools\effmpeg\cli.py:97
+msgid ""
+"Provide video fps. Can be an integer, float or fraction. Negative values will will "
+"make the program try to get the fps from the input or reference videos."
+msgstr ""
+"提供视频帧率。可以是整数、浮点数或分数。负值将使程序尝试从输入或参考视频中获取 fps。"
+
+#: tools\effmpeg\cli.py:107
+msgid ""
+"Image format that extracted images should be saved as. '.bmp' will offer the fastest "
+"extraction speed, but will take the most storage space. '.png' will be slower but "
+"will take less storage."
+msgstr ""
+"提取的图像应另存为的图像格式。“.bmp”将提供最快的提取速度，但将占用最多的存储空间。“."
+"png”会更慢，但占用的存储空间会更少。"
+
+#: tools\effmpeg\cli.py:114 tools\effmpeg\cli.py:123 tools\effmpeg\cli.py:132
+msgid "clip"
+msgstr "夹"
+
+#: tools\effmpeg\cli.py:116
+msgid ""
+"Enter the start time from which an action is to be applied. Default: 00:00:00, in HH:"
+"MM:SS format. You can also enter the time with or without the colons, e.g. 00:0000 or "
+"026010."
+msgstr ""
+"输入要应用操作的开始时间。默认值：00：00：00，采用 HH：MM：SS 格式。您也可以输入带或不"
+"带冒号的时间，例如 00：0000 或 026010。"
+
+#: tools\effmpeg\cli.py:125
+msgid ""
+"Enter the end time to which an action is to be applied. If both an end time and "
+"duration are set, then the end time will be used and the duration will be ignored. "
+"Default: 00:00:00, in HH:MM:SS."
+msgstr ""
+"输入要应用操作的结束时间。如果同时设置了结束时间和持续时间，则将使用结束时间并忽略持续"
+"时间。默认值：00：00：00，以 HH：MM：SS 为单位。"
+
+#: tools\effmpeg\cli.py:134
+msgid ""
+"Enter the duration of the chosen action, for example if you enter 00:00:10 for slice, "
+"then the first 10 seconds after and including the start time will be cut out into a "
+"new video. Default: 00:00:00, in HH:MM:SS format. You can also enter the time with or "
+"without the colons, e.g. 00:0000 or 026010."
+msgstr ""
+"输入所选操作的持续时间，例如，如果为切片输入 00：00：10，则开始时间（包括开始时间）的"
+"前 10 秒将被剪切到新视频中。默认值：00：00：00，采用 HH：MM：SS 格式。您也可以输入带或"
+"不带冒号的时间，例如 00：0000 或 026010。"
+
+#: tools\effmpeg\cli.py:144
+msgid ""
+"Mux the audio from the reference video into the input video. This option is only used "
+"for the 'gen-vid' action. 'mux-audio' action has this turned on implicitly."
+msgstr ""
+"将音频从参考视频复用到输入视频中。此选项仅用于“生成视频”操作。 “复用音频”操作隐式打开"
+"了此功能。"
+
+#: tools\effmpeg\cli.py:155 tools\effmpeg\cli.py:165
+msgid "rotate"
+msgstr "旋转"
+
+#: tools\effmpeg\cli.py:157
+msgid ""
+"Transpose the video. If transpose is set, then degrees will be ignored. For cli you "
+"can enter either the number or the long command name, e.g. to use (1, 90Clockwise) -"
+"tr 1 or -tr 90Clockwise"
+msgstr ""
+"转置视频。如果设置了转置，则将忽略度数。对于 cli，您可以输入数字或长命令名称，例如使"
+"用 （1， 90顺时针） -tr 1 或 -tr 90顺时针"
+
+#: tools\effmpeg\cli.py:166
+msgid "Rotate the video clockwise by the given number of degrees."
+msgstr "将视频顺时针旋转给定的度数。"
+
+#: tools\effmpeg\cli.py:173
+msgid "Set the new resolution scale if the chosen action is 'rescale'."
+msgstr "如果所选操作为“重新缩放”，请设置新的分辨率比例。"
+
+#: tools\effmpeg\cli.py:178 tools\effmpeg\cli.py:186
+msgid "settings"
+msgstr "设置"
+
+#: tools\effmpeg\cli.py:180
+msgid ""
+"Reduces output verbosity so that only serious errors are printed. If both quiet and "
+"verbose are set, verbose will override quiet."
+msgstr ""
+"减少输出详细程度，以便仅打印严重错误。如果同时设置了安静和详细，则详细将覆盖安静。"
+
+#: tools\effmpeg\cli.py:188
+msgid ""
+"Increases output verbosity. If both quiet and verbose are set, verbose will override "
+"quiet."
+msgstr "增加输出详细程度。如果同时设置了安静和详细，则详细将覆盖安静。"

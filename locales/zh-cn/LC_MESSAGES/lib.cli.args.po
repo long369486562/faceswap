@@ -1,0 +1,884 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: faceswap.spanish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-20 01:34+0000\n"
+"PO-Revision-Date: 2023-06-02 17:19+0800\n"
+"Last-Translator: \n"
+"Language-Team: tokafondo\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+
+#: lib\cli\args.py:193 lib\cli\args.py:203 lib\cli\args.py:211 lib\cli\args.py:221
+msgid "Global Options"
+msgstr "全局选项"
+
+#: lib\cli\args.py:194
+msgid ""
+"R|Exclude GPUs from use by Faceswap. Select the number(s) which correspond to any "
+"GPU(s) that you do not wish to be made available to Faceswap. Selecting all GPUs here "
+"will force Faceswap into CPU mode.\n"
+"L|{}"
+msgstr ""
+"R|将 GPU 排除在 Faceswap 使用之外。选择与您不希望提供给 Faceswap 的任何 GPU 相对应的数"
+"字。在此处选择所有GPU将强制Faceswap进入CPU模式。\n"
+"L|{}"
+
+#: lib\cli\args.py:204
+msgid "Optionally overide the saved config with the path to a custom config file."
+msgstr "（可选）使用自定义配置文件的路径覆盖保存的配置。"
+
+#: lib\cli\args.py:212
+msgid ""
+"Log level. Stick with INFO or VERBOSE unless you need to file an error report. Be "
+"careful with TRACE as it will generate a lot of data"
+msgstr ""
+"日志级别。坚持使用 INFO 或 VERBOSE，除非您需要提交错误报告。小心使用TRACE，因为它会生"
+"成大量数据"
+
+#: lib\cli\args.py:222
+msgid "Path to store the logfile. Leave blank to store in the faceswap folder"
+msgstr "存储日志文件的路径。留空以存储在面部交换文件夹中"
+
+#: lib\cli\args.py:320 lib\cli\args.py:329 lib\cli\args.py:337 lib\cli\args.py:386
+#: lib\cli\args.py:677 lib\cli\args.py:686
+msgid "Data"
+msgstr "数据"
+
+#: lib\cli\args.py:321
+msgid ""
+"Input directory or video. Either a directory containing the image files you wish to "
+"process or path to a video file. NB: This should be the source video/frames NOT the "
+"source faces."
+msgstr ""
+"输入目录或视频。包含要处理的图像文件的目录或视频文件的路径。注意：这应该是源视频/帧，"
+"而不是源面。"
+
+#: lib\cli\args.py:330
+msgid "Output directory. This is where the converted files will be saved."
+msgstr "输出目录。这是保存转换后文件的位置。"
+
+#: lib\cli\args.py:338
+msgid ""
+"Optional path to an alignments file. Leave blank if the alignments file is at the "
+"default location."
+msgstr "对齐文件的可选路径。如果对齐文件位于默认位置，则留空。"
+
+#: lib\cli\args.py:361
+msgid ""
+"Extract faces from image or video sources.\n"
+"Extraction plugins can be configured in the 'Settings' Menu"
+msgstr ""
+"从图像或视频源中提取人脸。\n"
+"可以在“设置”菜单中配置提取插件"
+
+#: lib\cli\args.py:387
+msgid ""
+"R|If selected then the input_dir should be a parent folder containing multiple videos "
+"and/or folders of images you wish to extract from. The faces will be output to "
+"separate sub-folders in the output_dir."
+msgstr ""
+"R|如果选中，则input_dir应该是包含多个视频和/或要从中提取的图像文件夹的父文件夹。人脸将"
+"输出到output_dir中的单独子文件夹。"
+
+#: lib\cli\args.py:396 lib\cli\args.py:412 lib\cli\args.py:424 lib\cli\args.py:463
+#: lib\cli\args.py:481 lib\cli\args.py:493 lib\cli\args.py:502 lib\cli\args.py:511
+#: lib\cli\args.py:696 lib\cli\args.py:723 lib\cli\args.py:761
+msgid "Plugins"
+msgstr "插件"
+
+#: lib\cli\args.py:397
+msgid ""
+"R|Detector to use. Some of these have configurable settings in '/config/extract.ini' "
+"or 'Settings > Configure Extract 'Plugins':\n"
+"L|cv2-dnn: A CPU only extractor which is the least reliable and least resource "
+"intensive. Use this if not using a GPU and time is important.\n"
+"L|mtcnn: Good detector. Fast on CPU, faster on GPU. Uses fewer resources than other "
+"GPU detectors but can often return more false positives.\n"
+"L|s3fd: Best detector. Slow on CPU, faster on GPU. Can detect more faces and fewer "
+"false positives than other GPU detectors, but is a lot more resource intensive."
+msgstr ""
+"R|要使用的检测器。其中一些在“/config/extract.ini”或“配置提取'插件>设置”中具有可配置的"
+"设置：\n"
+"L|cv2-dnn：仅 CPU 提取器，最不可靠且资源密集度最低。如果不使用 GPU，请使用此选项，并且"
+"时间很重要。\n"
+"L|mtcnn：很好的探测器。在 CPU 上速度快，在 GPU 上更快。与其他 GPU 检测器相比，使用的资"
+"源更少，但通常会返回更多的误报。\n"
+"L|s3fd：最佳探测器。CPU 速度慢，GPU 速度更快。与其他 GPU 检测器相比，可以检测更多的人"
+"脸和更少的误报，但资源密集得多。"
+
+#: lib\cli\args.py:413
+msgid ""
+"R|Aligner to use.\n"
+"L|cv2-dnn: A CPU only landmark detector. Faster, less resource intensive, but less "
+"accurate. Only use this if not using a GPU and time is important.\n"
+"L|fan: Best aligner. Fast on GPU, slow on CPU."
+msgstr ""
+"R|要使用的对准器。\n"
+"L|cv2-dnn：CPU 专用地标检测器。速度更快，资源密集度更低，但准确性较低。仅在不使用 GPU "
+"且时间很重要时才使用它。\n"
+"L|风扇：最佳对准器。在 GPU 上快，在 CPU 上慢。"
+
+#: lib\cli\args.py:425
+msgid ""
+"R|Additional Masker(s) to use. The masks generated here will all take up GPU RAM. You "
+"can select none, one or multiple masks, but the extraction may take longer the more "
+"you select. NB: The Extended and Components (landmark based) masks are automatically "
+"generated on extraction.\n"
+"L|bisenet-fp: Relatively lightweight NN based mask that provides more refined control "
+"over the area to be masked including full head masking (configurable in mask "
+"settings).\n"
+"L|custom: A dummy mask that fills the mask area with all 1s or 0s (configurable in "
+"settings). This is only required if you intend to manually edit the custom masks "
+"yourself in the manual tool. This mask does not use the GPU so will not use any "
+"additional VRAM.\n"
+"L|vgg-clear: Mask designed to provide smart segmentation of mostly frontal faces "
+"clear of obstructions. Profile faces and obstructions may result in sub-par "
+"performance.\n"
+"L|vgg-obstructed: Mask designed to provide smart segmentation of mostly frontal "
+"faces. The mask model has been specifically trained to recognize some facial "
+"obstructions (hands and eyeglasses). Profile faces may result in sub-par "
+"performance.\n"
+"L|unet-dfl: Mask designed to provide smart segmentation of mostly frontal faces. The "
+"mask model has been trained by community members and will need testing for further "
+"description. Profile faces may result in sub-par performance.\n"
+"The auto generated masks are as follows:\n"
+"L|components: Mask designed to provide facial segmentation based on the positioning "
+"of landmark locations. A convex hull is constructed around the exterior of the "
+"landmarks to create a mask.\n"
+"L|extended: Mask designed to provide facial segmentation based on the positioning of "
+"landmark locations. A convex hull is constructed around the exterior of the landmarks "
+"and the mask is extended upwards onto the forehead.\n"
+"(eg: `-M unet-dfl vgg-clear`, `--masker vgg-obstructed`)"
+msgstr ""
+"R|要使用的其他掩码器。此处生成的掩码将全部占用 GPU RAM。您可以选择无、一个或多个掩码，"
+"但选择的越多，提取可能需要更长的时间。注意：扩展和组件（基于地标）蒙版是在提取时自动生"
+"成的。\n"
+"L|bisenet-fp：相对轻量级的基于 NN 的遮罩，可对要遮罩的区域提供更精细的控制，包括全头遮"
+"罩（可在遮罩设置中配置）。\n"
+"L|custom：一个虚拟蒙版，用所有 1 或 0 填充蒙版区域（可在设置中配置）。仅当您打算在手动"
+"工具中自行手动编辑自定义蒙版时，才需要执行此操作。此掩码不使用 GPU，因此不会使用任何其"
+"他 VRAM。\n"
+"L|vgg-clear：面罩旨在为大部分正面面部提供智能分割，清除障碍物。轮廓面和障碍物可能会导"
+"致性能不佳。\n"
+"L|vgg-阻塞：面罩旨在提供大部分正面面部的智能分割。面罩模型经过专门训练，可以识别一些面"
+"部障碍物（手和眼镜）。轮廓面可能会导致性能不佳。\n"
+"L|unet-dfl：面具旨在为大部分正面面部提供智能分割。掩模模型已由社区成员训练，需要测试以"
+"进一步描述。轮廓面可能会导致性能不佳。\n"
+"自动生成的掩码如下：\n"
+"L|components：旨在根据地标位置的位置提供面部分割的面具。在地标的外部周围建造一个凸壳以"
+"创建遮罩。\n"
+"L|extended：旨在根据地标位置的位置提供面部分割的面具。在地标的外部周围建造了一个凸形的"
+"船体，面罩向上延伸到额头上。\n"
+"（例如： '-M unet-dfl vgg-clear'， '--masker vgg-obstructed'）"
+
+#: lib\cli\args.py:464
+msgid ""
+"R|Performing normalization can help the aligner better align faces with difficult "
+"lighting conditions at an extraction speed cost. Different methods will yield "
+"different results on different sets. NB: This does not impact the output face, just "
+"the input to the aligner.\n"
+"L|none: Don't perform normalization on the face.\n"
+"L|clahe: Perform Contrast Limited Adaptive Histogram Equalization on the face.\n"
+"L|hist: Equalize the histograms on the RGB channels.\n"
+"L|mean: Normalize the face colors to the mean."
+msgstr ""
+"R|执行归一化可以帮助对准器以提取速度成本更好地对齐具有困难照明条件的面。不同的方法在不"
+"同的集合上会产生不同的结果。注意：这不会影响输出面，只影响对准器的输入。\n"
+"L|none：不要在脸上进行正常化。\n"
+"L|clahe：对面部执行对比度有限的自适应直方图均衡。\n"
+"L|hist：均衡 RGB 通道上的直方图。\n"
+"L|mean：将面部颜色归一化为平均值。"
+
+#: lib\cli\args.py:482
+msgid ""
+"The number of times to re-feed the detected face into the aligner. Each time the face "
+"is re-fed into the aligner the bounding box is adjusted by a small amount. The final "
+"landmarks are then averaged from each iteration. Helps to remove 'micro-jitter' but "
+"at the cost of slower extraction speed. The more times the face is re-fed into the "
+"aligner, the less micro-jitter should occur but the longer extraction will take."
+msgstr ""
+"将检测到的面重新送入对准器的次数。每次将面重新送入对准器时，边界框都会调整少量。然后从"
+"每次迭代中平均最终地标。有助于消除“微抖动”，但代价是提取速度较慢。面部重新送入对准器的"
+"次数越多，发生的微抖动就越少，但提取所需的时间就越长。"
+
+#: lib\cli\args.py:494
+msgid ""
+"Re-feed the initially found aligned face through the aligner. Can help produce better "
+"alignments for faces that are rotated beyond 45 degrees in the frame or are at "
+"extreme angles. Slows down extraction."
+msgstr ""
+"通过对准器重新送入最初找到的对齐面。可以帮助为在帧中旋转超过 45 度或角度极端的面生成更"
+"好的对齐方式。减慢提取速度。"
+
+#: lib\cli\args.py:503
+msgid ""
+"If a face isn't found, rotate the images to try to find a face. Can find more faces "
+"at the cost of extraction speed. Pass in a single number to use increments of that "
+"size up to 360, or pass in a list of numbers to enumerate exactly what angles to "
+"check."
+msgstr ""
+"如果未找到人脸，请旋转图像以尝试查找人脸。可以以提取速度为代价找到更多人脸。传入单个数"
+"字以使用该大小的增量，最大为 360，或传入数字列表以准确枚举要检查的角度。"
+
+#: lib\cli\args.py:512
+msgid ""
+"Obtain and store face identity encodings from VGGFace2. Slows down extract a little, "
+"but will save time if using 'sort by face'"
+msgstr ""
+"从 VGGFace2 获取并存储人脸身份编码。稍微减慢提取速度，但如果使用“按面排序”，则会节省时"
+"间"
+
+#: lib\cli\args.py:522 lib\cli\args.py:532 lib\cli\args.py:544 lib\cli\args.py:557
+#: lib\cli\args.py:798 lib\cli\args.py:812 lib\cli\args.py:825 lib\cli\args.py:839
+msgid "Face Processing"
+msgstr "人脸处理"
+
+#: lib\cli\args.py:523
+msgid ""
+"Filters out faces detected below this size. Length, in pixels across the diagonal of "
+"the bounding box. Set to 0 for off"
+msgstr ""
+"筛选出检测到的低于此大小的人脸。长度，以边界框对角线的像素为单位。设置为 0 表示关闭"
+
+#: lib\cli\args.py:533
+msgid ""
+"Optionally filter out people who you do not wish to extract by passing in images of "
+"those people. Should be a small variety of images at different angles and in "
+"different conditions. A folder containing the required images or multiple image "
+"files, space separated, can be selected."
+msgstr ""
+"（可选）通过传入人员的图像来过滤掉您不希望提取的人员。应该是不同角度和不同条件下的少量"
+"图像。可以选择包含所需图像的文件夹或多个图像文件（空格分隔）。"
+
+#: lib\cli\args.py:545
+msgid ""
+"Optionally select people you wish to extract by passing in images of that person. "
+"Should be a small variety of images at different angles and in different conditions A "
+"folder containing the required images or multiple image files, space separated, can "
+"be selected."
+msgstr ""
+"（可选）通过传入该人员的图像来选择要提取的人员。应该是不同角度和不同条件下的少量图像 "
+"可以选择包含所需图像或多个图像文件的文件夹，空格分隔。"
+
+#: lib\cli\args.py:558
+msgid ""
+"For use with the optional nfilter/filter files. Threshold for positive face "
+"recognition. Higher values are stricter."
+msgstr "用于可选的 nfilter/filter 文件。正面人脸识别的阈值。值越高，越严格。"
+
+#: lib\cli\args.py:567 lib\cli\args.py:579 lib\cli\args.py:591 lib\cli\args.py:603
+msgid "output"
+msgstr "输出"
+
+#: lib\cli\args.py:568
+msgid ""
+"The output size of extracted faces. Make sure that the model you intend to train "
+"supports your required size. This will only need to be changed for hi-res models."
+msgstr ""
+"提取的人脸的输出大小。确保要训练的模型支持所需的大小。这只需要为高分辨率模型进行更改。"
+
+#: lib\cli\args.py:580
+msgid ""
+"Extract every 'nth' frame. This option will skip frames when extracting faces. For "
+"example a value of 1 will extract faces from every frame, a value of 10 will extract "
+"faces from every 10th frame."
+msgstr ""
+"提取每个“第 n 帧”。此选项将在提取人脸时跳过帧。例如，值 1 将从每帧中提取人脸，值 10 将"
+"从每 10 帧中提取人脸。"
+
+#: lib\cli\args.py:592
+msgid ""
+"Automatically save the alignments file after a set amount of frames. By default the "
+"alignments file is only saved at the end of the extraction process. NB: If extracting "
+"in 2 passes then the alignments file will only start to be saved out during the "
+"second pass. WARNING: Don't interrupt the script when writing the file because it "
+"might get corrupted. Set to 0 to turn off"
+msgstr ""
+"在设定数量的帧后自动保存对齐文件。默认情况下，对齐文件仅在提取过程结束时保存。注意：如"
+"果在 2 次过程中提取，则对齐文件只会在第二次通过期间开始保存。 警告：写入文件时不要中断"
+"脚本，因为它可能会损坏。设置为 0 表示关闭"
+
+#: lib\cli\args.py:604
+msgid "Draw landmarks on the ouput faces for debugging purposes."
+msgstr "在输出端面上绘制地标以进行调试。"
+
+#: lib\cli\args.py:610 lib\cli\args.py:619 lib\cli\args.py:627 lib\cli\args.py:634
+#: lib\cli\args.py:852 lib\cli\args.py:863 lib\cli\args.py:871 lib\cli\args.py:890
+#: lib\cli\args.py:896
+msgid "settings"
+msgstr "设置"
+
+#: lib\cli\args.py:611
+msgid ""
+"Don't run extraction in parallel. Will run each part of the extraction process "
+"separately (one after the other) rather than all at the same time. Useful if VRAM is "
+"at a premium."
+msgstr ""
+"不要并行运行提取。将单独运行提取过程的每个部分（一个接一个），而不是同时运行所有部分。"
+"如果VRAM非常昂贵，则很有用。"
+
+#: lib\cli\args.py:620
+msgid "Skips frames that have already been extracted and exist in the alignments file"
+msgstr "跳过已提取且存在于对齐文件中的帧"
+
+#: lib\cli\args.py:628
+msgid "Skip frames that already have detected faces in the alignments file"
+msgstr "跳过已在对齐文件中检测到人脸的帧"
+
+#: lib\cli\args.py:635
+msgid "Skip saving the detected faces to disk. Just create an alignments file"
+msgstr "跳过将检测到的人脸保存到磁盘。只需创建一个对齐文件"
+
+#: lib\cli\args.py:657
+msgid ""
+"Swap the original faces in a source video/images to your final faces.\n"
+"Conversion plugins can be configured in the 'Settings' Menu"
+msgstr ""
+"将源视频/图像中的原始面孔交换为最终面孔。\n"
+"转换插件可以在“设置”菜单中配置"
+
+#: lib\cli\args.py:678
+msgid ""
+"Only required if converting from images to video. Provide The original video that the "
+"source frames were extracted from (for extracting the fps and audio)."
+msgstr ""
+"仅当从图像转换为视频时才需要。提供从中提取源帧的原始视频（用于提取 fps 和音频）。"
+
+#: lib\cli\args.py:687
+msgid ""
+"Model directory. The directory containing the trained model you wish to use for "
+"conversion."
+msgstr "模型目录。包含要用于转换的已训练模型的目录。"
+
+#: lib\cli\args.py:697
+msgid ""
+"R|Performs color adjustment to the swapped face. Some of these options have "
+"configurable settings in '/config/convert.ini' or 'Settings > Configure Convert "
+"Plugins':\n"
+"L|avg-color: Adjust the mean of each color channel in the swapped reconstruction to "
+"equal the mean of the masked area in the original image.\n"
+"L|color-transfer: Transfers the color distribution from the source to the target "
+"image using the mean and standard deviations of the L*a*b* color space.\n"
+"L|manual-balance: Manually adjust the balance of the image in a variety of color "
+"spaces. Best used with the Preview tool to set correct values.\n"
+"L|match-hist: Adjust the histogram of each color channel in the swapped "
+"reconstruction to equal the histogram of the masked area in the original image.\n"
+"L|seamless-clone: Use cv2's seamless clone function to remove extreme gradients at "
+"the mask seam by smoothing colors. Generally does not give very satisfactory "
+"results.\n"
+"L|none: Don't perform color adjustment."
+msgstr ""
+"R|对交换的面执行颜色调整。其中一些选项在“/config/convert.ini”或“配置转换插件>设置”中具"
+"有可配置的设置：\n"
+"L|avg-color：调整交换重建中每个颜色通道的平均值，使其等于原始图像中遮罩区域的平均"
+"值。\n"
+"L|颜色转移：使用 L*a*b* 颜色空间的平均值和标准偏差将颜色分布从源传输到目标图像。\n"
+"L|手动平衡：在各种色彩空间中手动调整图像的平衡。最好与预览工具一起使用，以设置正确的"
+"值。\n"
+"L|match-hist：调整交换重建中每个颜色通道的直方图，使其等于原始图像中遮罩区域的直方"
+"图。\n"
+"L|无缝克隆：使用 cv2 的无缝克隆功能，通过平滑颜色来消除遮罩接缝处的极端渐变。一般不会"
+"给出非常令人满意的结果。\n"
+"L|none：不执行颜色调整。"
+
+#: lib\cli\args.py:724
+msgid ""
+"R|Masker to use. NB: The mask you require must exist within the alignments file. You "
+"can add additional masks with the Mask Tool.\n"
+"L|none: Don't use a mask.\n"
+"L|bisenet-fp_face: Relatively lightweight NN based mask that provides more refined "
+"control over the area to be masked (configurable in mask settings). Use this version "
+"of bisenet-fp if your model is trained with 'face' or 'legacy' centering.\n"
+"L|bisenet-fp_head: Relatively lightweight NN based mask that provides more refined "
+"control over the area to be masked (configurable in mask settings). Use this version "
+"of bisenet-fp if your model is trained with 'head' centering.\n"
+"L|custom_face: Custom user created, face centered mask.\n"
+"L|custom_head: Custom user created, head centered mask.\n"
+"L|components: Mask designed to provide facial segmentation based on the positioning "
+"of landmark locations. A convex hull is constructed around the exterior of the "
+"landmarks to create a mask.\n"
+"L|extended: Mask designed to provide facial segmentation based on the positioning of "
+"landmark locations. A convex hull is constructed around the exterior of the landmarks "
+"and the mask is extended upwards onto the forehead.\n"
+"L|vgg-clear: Mask designed to provide smart segmentation of mostly frontal faces "
+"clear of obstructions. Profile faces and obstructions may result in sub-par "
+"performance.\n"
+"L|vgg-obstructed: Mask designed to provide smart segmentation of mostly frontal "
+"faces. The mask model has been specifically trained to recognize some facial "
+"obstructions (hands and eyeglasses). Profile faces may result in sub-par "
+"performance.\n"
+"L|unet-dfl: Mask designed to provide smart segmentation of mostly frontal faces. The "
+"mask model has been trained by community members and will need testing for further "
+"description. Profile faces may result in sub-par performance.\n"
+"L|predicted: If the 'Learn Mask' option was enabled during training, this will use "
+"the mask that was created by the trained model."
+msgstr ""
+"R|对交换的面执行颜色调整。其中一些选项在“/config/convert.ini”或“配置转换插件>设置”中具"
+"有可配置的设置：\n"
+"L|avg-color：调整交换重建中每个颜色通道的平均值，使其等于原始图像中遮罩区域的平均"
+"值。\n"
+"L|颜色转移：使用 L*a*b* 颜色空间的平均值和标准偏差将颜色分布从源传输到目标图像。\n"
+"L|手动平衡：在各种色彩空间中手动调整图像的平衡。最好与预览工具一起使用，以设置正确的"
+"值。\n"
+"L|match-hist：调整交换重建中每个颜色通道的直方图，使其等于原始图像中遮罩区域的直方"
+"图。\n"
+"L|无缝克隆：使用 cv2 的无缝克隆功能，通过平滑颜色来消除遮罩接缝处的极端渐变。一般不会"
+"给出非常令人满意的结果。\n"
+"L|none：不执行颜色调整。"
+
+#: lib\cli\args.py:762
+msgid ""
+"R|The plugin to use to output the converted images. The writers are configurable in '/"
+"config/convert.ini' or 'Settings > Configure Convert Plugins:'\n"
+"L|ffmpeg: [video] Writes out the convert straight to video. When the input is a "
+"series of images then the '-ref' (--reference-video) parameter must be set.\n"
+"L|gif: [animated image] Create an animated gif.\n"
+"L|opencv: [images] The fastest image writer, but less options and formats than other "
+"plugins.\n"
+"L|pillow: [images] Slower than opencv, but has more options and supports more formats."
+msgstr ""
+"R|要使用的掩码器。注意：您需要的掩码必须存在于对齐文件中。您可以使用蒙版工具添加其他蒙"
+"版。\n"
+"L|none：不要使用口罩。\n"
+"L|bisenet-fp_face：相对轻量级的基于 NN 的掩码，可对要遮罩的区域提供更精细的控制（可在"
+"遮罩设置中配置）。如果您的模型使用“面部”或“传统”居中进行训练，请使用此版本的 bisenet-"
+"fp。\n"
+"L|bisenet-fp_head：相对轻量级的基于 NN 的掩码，可对要遮罩的区域提供更精细的控制（可在"
+"遮罩设置中配置）。如果您的模型是使用“头部”居中训练的，请使用此版本的 bisenet-fp。\n"
+"L|custom_face：自定义用户创建的、以面部为中心的蒙版。\n"
+"L|custom_head：自定义用户创建的、头部居中的蒙版。\n"
+"L|components：旨在根据地标位置的位置提供面部分割的面具。在地标的外部周围建造一个凸壳以"
+"创建遮罩。\n"
+"L|extended：旨在根据地标位置的位置提供面部分割的面具。在地标的外部周围建造了一个凸形的"
+"船体，面罩向上延伸到额头上。\n"
+"L|vgg-clear：面罩旨在为大部分正面面部提供智能分割，清除障碍物。轮廓面和障碍物可能会导"
+"致性能不佳。\n"
+"L|vgg-阻塞：面罩旨在提供大部分正面面部的智能分割。面罩模型经过专门训练，可以识别一些面"
+"部障碍物（手和眼镜）。轮廓面可能会导致性能不佳。\n"
+"L|unet-dfl：面具旨在为大部分正面面部提供智能分割。掩模模型已由社区成员训练，需要测试以"
+"进一步描述。轮廓面可能会导致性能不佳。\n"
+"L|predicted：如果在训练期间启用了“学习掩码”选项，这将使用由训练模型创建的掩码。"
+
+#: lib\cli\args.py:781 lib\cli\args.py:788 lib\cli\args.py:882
+msgid "Frame Processing"
+msgstr ""
+"R|用于输出转换后的图像的插件。编写器可在“/config/convert.ini”或“配置转换插件>设置：”中"
+"进行配置\n"
+"L|ffmpeg： [video] 将转换直接写出为视频。当输入是一系列图像时，必须设置“-ref”（--"
+"reference-video）参数。\n"
+"L|gif：[动画图像]创建一个动画 gif。\n"
+"L|opencv：[images]最快的图像编写器，但选项和格式比其他插件少。\n"
+"L|pillow： [图片] 比opencv慢，但有更多的选择，支持更多的格式。"
+
+#: lib\cli\args.py:782
+#, python-format
+msgid ""
+"Scale the final output frames by this amount. 100%% will output the frames at source "
+"dimensions. 50%% at half size 200%% at double size"
+msgstr "帧处理"
+
+#: lib\cli\args.py:789
+msgid ""
+"Frame ranges to apply transfer to e.g. For frames 10 to 50 and 90 to 100 use --frame-"
+"ranges 10-50 90-100. Frames falling outside of the selected range will be discarded "
+"unless '-k' (--keep-unchanged) is selected. NB: If you are converting from images, "
+"then the filenames must end with the frame-number!"
+msgstr "按此量缩放最终输出帧。100%% 将以源尺寸输出帧。半码时为 50%% 双倍码时为 200%%"
+
+#: lib\cli\args.py:799
+msgid ""
+"If you have not cleansed your alignments file, then you can filter out faces by "
+"defining a folder here that contains the faces extracted from your input files/video. "
+"If this folder is defined, then only faces that exist within your alignments file and "
+"also exist within the specified folder will be converted. Leaving this blank will "
+"convert all faces that exist within the alignments file."
+msgstr ""
+"要应用传输的帧范围，例如，对于帧 10 到 50 和 90 到 100，请使用 --帧范围 10-50 90-100。"
+"超出所选范围的帧将被丢弃，除非选择了“-k”（--keep-unchanged）。注意：如果要从图像转换，"
+"则文件名必须以帧号结尾！"
+
+#: lib\cli\args.py:813
+msgid ""
+"Optionally filter out people who you do not wish to process by passing in an image of "
+"that person. Should be a front portrait with a single person in the image. Multiple "
+"images can be added space separated. NB: Using face filter will significantly "
+"decrease extraction speed and its accuracy cannot be guaranteed."
+msgstr ""
+"如果您尚未清理对齐文件，则可以通过在此处定义一个文件夹来过滤掉人脸，该文件夹包含从输入"
+"文件/视频中提取的人脸。如果定义了此文件夹，则只会转换存在于对齐文件中且也存在于指定文"
+"件夹中的面。将此留空将转换对齐文件中存在的所有面。"
+
+#: lib\cli\args.py:826
+msgid ""
+"Optionally select people you wish to process by passing in an image of that person. "
+"Should be a front portrait with a single person in the image. Multiple images can be "
+"added space separated. NB: Using face filter will significantly decrease extraction "
+"speed and its accuracy cannot be guaranteed."
+msgstr ""
+"（可选）通过传入此人的图像来过滤掉您不希望处理的人员。应该是图像中只有一个人的正面肖"
+"像。多个图像可以添加间隔空间。注意：使用面部过滤器会显着降低提取速度，并且无法保证其准"
+"确性。"
+
+#: lib\cli\args.py:840
+msgid ""
+"For use with the optional nfilter/filter files. Threshold for positive face "
+"recognition. Lower values are stricter. NB: Using face filter will significantly "
+"decrease extraction speed and its accuracy cannot be guaranteed."
+msgstr ""
+"（可选）通过传入此人的图像来选择要处理的人员。应该是图像中只有一个人的正面肖像。多个图"
+"像可以添加间隔空间。注意：使用面部过滤器会显着降低提取速度，并且无法保证其准确性。"
+
+#: lib\cli\args.py:853
+msgid ""
+"The maximum number of parallel processes for performing conversion. Converting images "
+"is system RAM heavy so it is possible to run out of memory if you have a lot of "
+"processes and not enough RAM to accommodate them all. Setting this to 0 will use the "
+"maximum available. No matter what you set this to, it will never attempt to use more "
+"processes than are available on your system. If singleprocess is enabled this setting "
+"will be ignored."
+msgstr ""
+"用于可选的 nfilter/filter 文件。正面人脸识别的阈值。值越低越严格。注意：使用面部过滤器"
+"会显着降低提取速度，并且无法保证其准确性。"
+
+#: lib\cli\args.py:864
+msgid ""
+"[LEGACY] This only needs to be selected if a legacy model is being loaded or if there "
+"are multiple models in the model folder"
+msgstr ""
+"用于执行转换的最大并行进程数。转换图像是系统RAM繁重，因此如果您有很多进程并且没有足够"
+"的RAM来容纳它们，则可能会耗尽内存。将此设置为 0 将使用可用的最大值。无论您将其设置为什"
+"么，它都不会尝试使用比系统上可用的进程更多的进程。如果启用了单进程，则将忽略此设置。"
+
+#: lib\cli\args.py:872
+msgid ""
+"Enable On-The-Fly Conversion. NOT recommended. You should generate a clean alignments "
+"file for your destination video. However, if you wish you can generate the alignments "
+"on-the-fly by enabling this option. This will use an inferior extraction pipeline and "
+"will lead to substandard results. If an alignments file is found, this option will be "
+"ignored."
+msgstr "[遗产]仅当正在加载旧模型或模型文件夹中有多个模型时，才需要选择此选项"
+
+#: lib\cli\args.py:883
+msgid ""
+"When used with --frame-ranges outputs the unchanged frames that are not processed "
+"instead of discarding them."
+msgstr ""
+"启用即时转换。不推荐。您应该为目标视频生成一个干净的对齐文件。但是，如果您愿意，可以通"
+"过启用此选项来动态生成对齐方式。这将使用劣质提取管道，并将导致不合格的结果。如果找到对"
+"齐文件，将忽略此选项。"
+
+#: lib\cli\args.py:891
+msgid "Swap the model. Instead converting from of A -> B, converts B -> A"
+msgstr "当与 --frame-range 一起使用时，会输出未处理的未处理的未更改帧，而不是丢弃它们。"
+
+#: lib\cli\args.py:897
+msgid "Disable multiprocessing. Slower but less resource intensive."
+msgstr "交换模型。而不是从 A -> B 转换，转换 B -> A"
+
+#: lib\cli\args.py:913
+msgid ""
+"Train a model on extracted original (A) and swap (B) faces.\n"
+"Training models can take a long time. Anything from 24hrs to over a week\n"
+"Model plugins can be configured in the 'Settings' Menu"
+msgstr "禁用多处理。速度较慢，但资源密集度较低。"
+
+#: lib\cli\args.py:932 lib\cli\args.py:941
+msgid "faces"
+msgstr ""
+"在提取的原始 （A） 和交换 （B） 面上训练模型。\n"
+"训练模型可能需要很长时间。从24小时到一周以上的任何时间\n"
+"模型插件可以在“设置”菜单中配置"
+
+#: lib\cli\args.py:933
+msgid ""
+"Input directory. A directory containing training images for face A. This is the "
+"original face, i.e. the face that you want to remove and replace with face B."
+msgstr "面临"
+
+#: lib\cli\args.py:942
+msgid ""
+"Input directory. A directory containing training images for face B. This is the swap "
+"face, i.e. the face that you want to place onto the head of person A."
+msgstr ""
+"输入目录。包含人脸 A 的训练图像的目录。这是原始面孔，即您要删除并替换为面 B 的面。"
+
+#: lib\cli\args.py:950 lib\cli\args.py:962 lib\cli\args.py:978 lib\cli\args.py:1003
+#: lib\cli\args.py:1013
+msgid "model"
+msgstr "输入目录。包含人脸 B 的训练图像的目录。这是交换脸，即你想放在人A头上的脸。"
+
+#: lib\cli\args.py:951
+msgid ""
+"Model directory. This is where the training data will be stored. You should always "
+"specify a new folder for new models. If starting a new model, select either an empty "
+"folder, or a folder which does not exist (which will be created). If continuing to "
+"train an existing model, specify the location of the existing model."
+msgstr "型"
+
+#: lib\cli\args.py:963
+msgid ""
+"R|Load the weights from a pre-existing model into a newly created model. For most "
+"models this will load weights from the Encoder of the given model into the encoder of "
+"the newly created model. Some plugins may have specific configuration options "
+"allowing you to load weights from other layers. Weights will only be loaded when "
+"creating a new model. This option will be ignored if you are resuming an existing "
+"model. Generally you will also want to 'freeze-weights' whilst the rest of your model "
+"catches up with your Encoder.\n"
+"NB: Weights can only be loaded from models of the same plugin as you intend to train."
+msgstr ""
+"模型目录。这是存储训练数据的位置。应始终为新模型指定新文件夹。如果启动新模型，请选择空"
+"文件夹或不存在的文件夹（将创建该文件夹）。如果继续训练现有模型，请指定现有模型的位置。"
+
+#: lib\cli\args.py:979
+msgid ""
+"R|Select which trainer to use. Trainers can be configured from the Settings menu or "
+"the config folder.\n"
+"L|original: The original model created by /u/deepfakes.\n"
+"L|dfaker: 64px in/128px out model from dfaker. Enable 'warp-to-landmarks' for full "
+"dfaker method.\n"
+"L|dfl-h128: 128px in/out model from deepfacelab\n"
+"L|dfl-sae: Adaptable model from deepfacelab\n"
+"L|dlight: A lightweight, high resolution DFaker variant.\n"
+"L|iae: A model that uses intermediate layers to try to get better details\n"
+"L|lightweight: A lightweight model for low-end cards. Don't expect great results. Can "
+"train as low as 1.6GB with batch size 8.\n"
+"L|realface: A high detail, dual density model based on DFaker, with customizable in/"
+"out resolution. The autoencoders are unbalanced so B>A swaps won't work so well. By "
+"andenixa et al. Very configurable.\n"
+"L|unbalanced: 128px in/out model from andenixa. The autoencoders are unbalanced so "
+"B>A swaps won't work so well. Very configurable.\n"
+"L|villain: 128px in/out model from villainguy. Very resource hungry (You will require "
+"a GPU with a fair amount of VRAM). Good for details, but more susceptible to color "
+"differences."
+msgstr ""
+"R|将权重从预先存在的模型加载到新创建的模型中。对于大多数模型，这会将权重从给定模型的编"
+"码器加载到新创建的模型的编码器中。某些插件可能具有特定的配置选项，允许您从其他层加载权"
+"重。权重仅在创建新模型时加载。如果要恢复现有模型，将忽略此选项。通常，您还需要“冻结重"
+"量”，而模型的其余部分则赶上您的编码器。\n"
+"注意：权重只能从您打算训练的同一插件的模型中加载。"
+
+#: lib\cli\args.py:1004
+msgid ""
+"Output a summary of the model and exit. If a model folder is provided then a summary "
+"of the saved model is displayed. Otherwise a summary of the model that would be "
+"created by the chosen plugin and configuration settings is displayed."
+msgstr ""
+"R|选择要使用的培训师。可以从“设置”菜单或配置文件夹配置训练器。\n"
+"L|original：由 /u/deepfakes 创建的原始模型。\n"
+"L|dfaker：来自 dfaker 的 64px in/128px 输出模型。启用“变形到地标”以获得完整的伪造方"
+"法。\n"
+"L|dfl-h128：来自 deepfacelab 的 128px 输入/输出模型\n"
+"L|dfl-sae：来自deepfacelab的适应性模型\n"
+"L|dlight：轻量级、高分辨率的DFaker变体。\n"
+"L|iae：使用中间层尝试获得更好细节的模型\n"
+"L|轻量级：用于低端卡的轻量级型号。不要指望会有好的结果。可以训练低至 1.6GB，批量大小"
+"为 8。\n"
+"L|realface：基于DFaker的高细节，双密度模型，具有可自定义的输入/输出分辨率。自动编码器"
+"是不平衡的，因此 B>A 交换不会很好地工作。作者：Andenixa et al. 非常可配置。\n"
+"L|不平衡：来自 andenixa 的 128px 输入/输出模型。自动编码器是不平衡的，因此 B>A 交换不"
+"会很好地工作。非常可配置。\n"
+"L|反派：128px输入/输出模型来自反派。非常耗费资源（您将需要一个具有相当数量的 VRAM 的 "
+"GPU）。适合细节，但更容易出现色差。"
+
+#: lib\cli\args.py:1014
+msgid ""
+"Freeze the weights of the model. Freezing weights means that some of the parameters "
+"in the model will no longer continue to learn, but those that are not frozen will "
+"continue to learn. For most models, this will freeze the encoder, but some models may "
+"have configuration options for freezing other layers."
+msgstr ""
+"输出模型摘要并退出。如果提供了模型文件夹，则会显示已保存模型的摘要。否则，将显示所选插"
+"件和配置设置将创建的模型的摘要。"
+
+#: lib\cli\args.py:1027 lib\cli\args.py:1039 lib\cli\args.py:1050 lib\cli\args.py:1061
+#: lib\cli\args.py:1144
+msgid "training"
+msgstr ""
+"冻结模型的权重。冻结权重意味着模型中的某些参数将不再继续学习，但那些未冻结的参数将继续"
+"学习。对于大多数型号，这将冻结编码器，但某些型号可能具有用于冻结其他图层的配置选项。"
+
+#: lib\cli\args.py:1028
+msgid ""
+"Batch size. This is the number of images processed through the model for each side "
+"per iteration. NB: As the model is fed 2 sides at a time, the actual number of images "
+"within the model at any one time is double the number that you set here. Larger "
+"batches require more GPU RAM."
+msgstr "训练"
+
+#: lib\cli\args.py:1040
+msgid ""
+"Length of training in iterations. This is only really used for automation. There is "
+"no 'correct' number of iterations a model should be trained for. You should stop "
+"training when you are happy with the previews. However, if you want the model to stop "
+"automatically at a set number of iterations, you can set that value here."
+msgstr ""
+"批量大小。这是每次迭代通过模型处理的每一侧的图像数。注意：由于模型一次馈送 2 个边，因"
+"此模型内在任何时候的实际图像数量都是您在此处设置的数量的两倍。较大的批次需要更多的 "
+"GPU RAM。"
+
+#: lib\cli\args.py:1051
+msgid ""
+"[Deprecated - Use '-D, --distribution-strategy' instead] Use the Tensorflow Mirrored "
+"Distrubution Strategy to train on multiple GPUs."
+msgstr ""
+"迭代中的训练长度。这仅用于自动化。模型没有“正确”的迭代次数。当您对预览感到满意时，您应"
+"该停止训练。但是，如果希望模型在设定的迭代次数时自动停止，则可以在此处设置该值。"
+
+#: lib\cli\args.py:1062
+msgid ""
+"R|Select the distribution stategy to use.\n"
+"L|default: Use Tensorflow's default distribution strategy.\n"
+"L|central-storage: Centralizes variables on the CPU whilst operations are performed "
+"on 1 or more local GPUs. This can help save some VRAM at the cost of some speed by "
+"not storing variables on the GPU. Note: Mixed-Precision is not supported on multi-GPU "
+"setups.\n"
+"L|mirrored: Supports synchronous distributed training across multiple local GPUs. A "
+"copy of the model and all variables are loaded onto each GPU with batches distributed "
+"to each GPU at each iteration."
+msgstr ""
+"迭代中的训练长度。这仅用于自动化。模型没有“正确”的迭代次数。当您对预览感到满意时，您应"
+"该停止训练。但是，如果希望模型在设定的迭代次数时自动停止，则可以在此处设置该值。"
+
+#: lib\cli\args.py:1079 lib\cli\args.py:1089
+msgid "Saving"
+msgstr ""
+"[已弃用 - 改用“-D， --distribution-strategy”]使用 Tensorflow 镜像分发策略在多个 GPU 上"
+"进行训练。"
+
+#: lib\cli\args.py:1080
+msgid "Sets the number of iterations between each model save."
+msgstr ""
+"R|选择要使用的分发策略。\n"
+"L|default：使用 Tensorflow 的默认分布策略。\n"
+"L|中央存储：将变量集中在 CPU 上，同时在 1 个或多个本地 GPU 上执行操作。这可以通过不在 "
+"GPU 上存储变量来帮助以一些速度为代价节省一些 VRAM。注意：多 GPU 设置不支持混合精度。\n"
+"L|镜像：支持跨多个本地 GPU 的同步分布式训练。模型的副本和所有变量加载到每个 GPU 上，并"
+"在每次迭代时批量分发到每个 GPU。"
+
+#: lib\cli\args.py:1090
+msgid ""
+"Sets the number of iterations before saving a backup snapshot of the model in it's "
+"current state. Set to 0 for off."
+msgstr "储蓄"
+
+#: lib\cli\args.py:1097 lib\cli\args.py:1108 lib\cli\args.py:1119
+msgid "timelapse"
+msgstr "设置每个模型保存之间的迭代次数。"
+
+#: lib\cli\args.py:1098
+msgid ""
+"Optional for creating a timelapse. Timelapse will save an image of your selected "
+"faces into the timelapse-output folder at every save iteration. This should be the "
+"input folder of 'A' faces that you would like to use for creating the timelapse. You "
+"must also supply a --timelapse-output and a --timelapse-input-B parameter."
+msgstr "设置将模型的备份快照保存为当前状态之前的迭代次数。设置为 0 表示关闭。"
+
+#: lib\cli\args.py:1109
+msgid ""
+"Optional for creating a timelapse. Timelapse will save an image of your selected "
+"faces into the timelapse-output folder at every save iteration. This should be the "
+"input folder of 'B' faces that you would like to use for creating the timelapse. You "
+"must also supply a --timelapse-output and a --timelapse-input-A parameter."
+msgstr "延时摄影"
+
+#: lib\cli\args.py:1120
+msgid ""
+"Optional for creating a timelapse. Timelapse will save an image of your selected "
+"faces into the timelapse-output folder at every save iteration. If the input folders "
+"are supplied but no output folder, it will default to your model folder /timelapse/"
+msgstr ""
+"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
+"夹中。这应该是您要用于创建延时摄影的“A”面的输入文件夹。还必须提供 --timelapse-output "
+"和 --timelapse-input-B 参数。"
+
+#: lib\cli\args.py:1129 lib\cli\args.py:1136
+msgid "preview"
+msgstr ""
+"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
+"夹中。这应该是您要用于创建延时摄影的“B”面的输入文件夹。还必须提供 --timelapse-output "
+"和 --timelapse-input-A 参数。"
+
+#: lib\cli\args.py:1130
+msgid "Show training preview output. in a separate window."
+msgstr ""
+"可选用于创建延时摄影。延时摄影会在每次保存迭代时将所选人脸的图像保存到延时摄影输出文件"
+"夹中。如果提供了输入文件夹但没有输出文件夹，它将默认为模型文件夹 /timelapse/"
+
+#: lib\cli\args.py:1137
+msgid ""
+"Writes the training result to a file. The image will be stored in the root of your "
+"FaceSwap folder."
+msgstr "预览"
+
+#: lib\cli\args.py:1145
+msgid ""
+"Disables TensorBoard logging. NB: Disabling logs means that you will not be able to "
+"use the graph or analysis for this session in the GUI."
+msgstr "显示训练预览输出。在单独的窗口中。"
+
+#: lib\cli\args.py:1152 lib\cli\args.py:1161 lib\cli\args.py:1170 lib\cli\args.py:1179
+msgid "augmentation"
+msgstr "将训练结果写入文件。图像将存储在FaceSwap文件夹的根目录中。"
+
+#: lib\cli\args.py:1153
+msgid ""
+"Warps training faces to closely matched Landmarks from the opposite face-set rather "
+"than randomly warping the face. This is the 'dfaker' way of doing warping."
+msgstr ""
+"禁用张量板日志记录。注意：禁用日志意味着您将无法在 GUI 中使用此会话的图形或分析。"
+
+#: lib\cli\args.py:1162
+msgid ""
+"To effectively learn, a random set of images are flipped horizontally. Sometimes it "
+"is desirable for this not to occur. Generally this should be left off except for "
+"during 'fit training'."
+msgstr "增大"
+
+#: lib\cli\args.py:1171
+msgid ""
+"Color augmentation helps make the model less susceptible to color differences between "
+"the A and B sets, at an increased training time cost. Enable this option to disable "
+"color augmentation."
+msgstr "将训练面扭曲到与对面紧密匹配的地标，而不是随机扭曲面。这是“伪造者”的翘曲方式。"
+
+#: lib\cli\args.py:1180
+msgid ""
+"Warping is integral to training the Neural Network. This option should only be "
+"enabled towards the very end of training to try to bring out more detail. Think of it "
+"as 'fine-tuning'. Enabling this option from the beginning is likely to kill a model "
+"and lead to terrible results."
+msgstr ""
+"为了有效地学习，一组随机的图像被水平翻转。有时希望不要发生这种情况。一般来说，除了"
+"在“健身训练”期间，这应该被省略。"
+
+#: lib\cli\args.py:1205
+msgid "Output to Shell console instead of GUI console"
+msgstr ""
+"颜色增强有助于使模型不易受到 A 和 B 集之间色差的影响，同时增加训练时间成本。启用此选项"
+"可禁用颜色增强。"
+
+#~ msgid ""
+#~ "DEPRECATED - This option will be removed in a future update. Path to alignments "
+#~ "file for training set A. Defaults to <input-A>/alignments.json if not provided."
+#~ msgstr ""
+#~ "DEPRECIADO - Esta opción se eliminará en una futura actualización. Ruta al archivo "
+#~ "de alineaciones para el conjunto de entrenamiento A. Por defecto es <input-A>/"
+#~ "alignments.json si no se proporciona."
+
+#~ msgid ""
+#~ "DEPRECATED - This option will be removed in a future update. Path to alignments "
+#~ "file for training set B. Defaults to <input-B>/alignments.json if not provided."
+#~ msgstr ""
+#~ "DEPRECIADO - Esta opción se eliminará en una futura actualización. Ruta al archivo "
+#~ "de alineaciones para el conjunto de entrenamiento B. Por defecto es <input-B>/"
+#~ "alignments.json si no se proporciona."

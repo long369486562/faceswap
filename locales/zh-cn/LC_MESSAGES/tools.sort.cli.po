@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-24 14:19+0900\n"
+"PO-Revision-Date: 2023-06-02 17:21+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+
+#: tools\sort\cli.py:14
+msgid "This command lets you sort images using various methods."
+msgstr "此命令允许您使用各种方法对图像进行排序。"
+
+#: tools\sort\cli.py:20
+msgid ""
+" Adjust the '-t' ('--threshold') parameter to control the strength of grouping."
+msgstr " 调整“-t”（“--阈值”）参数以控制分组强度。"
+
+#: tools\sort\cli.py:21
+msgid ""
+" Adjust the '-b' ('--bins') parameter to control the number of bins for grouping. "
+"Each image is allocated to a bin by the percentage of color pixels that appear in "
+"the image."
+msgstr ""
+" 调整“-b”（“--bins”）参数以控制要分组的条柱数量。每个图像都按图像中显示的颜色像素的"
+"百分比分配给一个箱。"
+
+#: tools\sort\cli.py:24
+msgid ""
+" Adjust the '-b' ('--bins') parameter to control the number of bins for grouping. "
+"Each image is allocated to a bin by the number of degrees the face is orientated "
+"from center."
+msgstr ""
+" 调整“-b”（“--bins”）参数以控制要分组的条柱数量。每个图像都根据面部从中心定向的度数"
+"分配给一个箱。"
+
+#: tools\sort\cli.py:27
+msgid ""
+" Adjust the '-b' ('--bins') parameter to control the number of bins for grouping. "
+"The minimum and maximum values are taken for the chosen sort metric. The bins are "
+"then populated with the results from the group sorting."
+msgstr ""
+" 调整“-b”（“--bins”）参数以控制要分组的条柱数量。所选排序指标的最小值和最大值。然"
+"后，使用组排序的结果填充箱。"
+
+#: tools\sort\cli.py:31
+msgid "faces by blurriness."
+msgstr "面孔模糊。"
+
+#: tools\sort\cli.py:32
+msgid "faces by fft filtered blurriness."
+msgstr "面部通过FFT过滤模糊。"
+
+#: tools\sort\cli.py:33
+msgid ""
+"faces by the estimated distance of the alignments from an 'average' face. This can "
+"be useful for eliminating misaligned faces. Sorts from most like an average face "
+"to least like an average face."
+msgstr ""
+"面按与“平均”面的对齐距离估计。这对于消除未对齐的面很有用。从最像普通脸到最不像普通"
+"脸排序。"
+
+#: tools\sort\cli.py:36
+msgid ""
+"faces using VGG Face2 by face similarity. This uses a pairwise clustering "
+"algorithm to check the distances between 512 features on every face in your set "
+"and order them appropriately."
+msgstr ""
+"人脸使用 VGG Face2 通过人脸相似性。这将使用成对聚类算法来检查集合中每个面上 512 个"
+"要素之间的距离，并对其进行适当的排序。"
+
+#: tools\sort\cli.py:39
+msgid "faces by their landmarks."
+msgstr "面对他们的地标。"
+
+#: tools\sort\cli.py:40
+msgid "Like 'face-cnn' but sorts by dissimilarity."
+msgstr "像“face-cnn”，但按差异排序。"
+
+#: tools\sort\cli.py:41
+msgid "faces by Yaw (rotation left to right)."
+msgstr "由偏航（从左到右旋转）的脸。"
+
+#: tools\sort\cli.py:42
+msgid "faces by Pitch (rotation up and down)."
+msgstr "按俯仰（上下旋转）的面。"
+
+#: tools\sort\cli.py:43
+msgid ""
+"faces by Roll (rotation). Aligned faces should have a roll value close to zero. "
+"The further the Roll value from zero the higher liklihood the face is misaligned."
+msgstr ""
+"面由滚动（旋转）。对齐面的滚动值应接近于零。滚动值离零越远，面未对齐的可能性就越"
+"高。"
+
+#: tools\sort\cli.py:45
+msgid "faces by their color histogram."
+msgstr "面部的颜色直方图。"
+
+#: tools\sort\cli.py:46
+msgid "Like 'hist' but sorts by dissimilarity."
+msgstr "像“hist”，但按差异排序。"
+
+#: tools\sort\cli.py:47
+msgid "images by the average intensity of the converted grayscale color channel."
+msgstr "图像按转换后的灰度颜色通道的平均强度。"
+
+#: tools\sort\cli.py:48
+msgid ""
+"images by their number of black pixels. Useful when faces are near borders and a "
+"large part of the image is black."
+msgstr "图像按黑色像素数排列。当人脸靠近边框且图像的很大一部分为黑色时很有用。"
+
+#: tools\sort\cli.py:50
+msgid ""
+"images by the average intensity of the converted Y color channel. Bright lighting "
+"and oversaturated images will be ranked first."
+msgstr "图像由转换后的平均强度Y颜色通道。明亮的照明和过饱和的图像将排在第一位。"
+
+#: tools\sort\cli.py:52
+msgid ""
+"images by the average intensity of the converted Cg color channel. Green images "
+"will be ranked first and red images will be last."
+msgstr "图像由平均强度转换后的Cg颜色通道。绿色图像将排在第一位，红色图像将排在最后。"
+
+#: tools\sort\cli.py:54
+msgid ""
+"images by the average intensity of the converted Co color channel. Orange images "
+"will be ranked first and blue images will be last."
+msgstr "图像由平均强度转换后的Co颜色通道。橙色图像将排在第一位，蓝色图像将排在最后。"
+
+#: tools\sort\cli.py:56
+msgid ""
+"images by their size in the original frame. Faces further from the camera and from "
+"lower resolution sources will be sorted first, whilst faces closer to the camera "
+"and from higher resolution sources will be sorted last."
+msgstr ""
+"图像按其在原始帧中的大小。离相机较远和较低分辨率源的人脸将首先排序，而距离相机较近"
+"和来自更高分辨率源的人脸将最后排序。"
+
+#: tools\sort\cli.py:59
+msgid " option is deprecated. Use 'yaw'"
+msgstr " 选项已弃用。使用“偏航”"
+
+#: tools\sort\cli.py:60
+msgid " option is deprecated. Use 'color-black'"
+msgstr " 选项已弃用。使用“黑色”"
+
+#: tools\sort\cli.py:82
+msgid "Sort faces using a number of different techniques"
+msgstr "使用多种不同的技术对人脸进行排序"
+
+#: tools\sort\cli.py:92 tools\sort\cli.py:99 tools\sort\cli.py:110
+#: tools\sort\cli.py:148
+msgid "data"
+msgstr "数据"
+
+#: tools\sort\cli.py:93
+msgid "Input directory of aligned faces."
+msgstr "对齐面的输入目录。"
+
+#: tools\sort\cli.py:100
+msgid ""
+"Output directory for sorted aligned faces. If not provided and 'keep' is selected "
+"then a new folder called 'sorted' will be created within the input folder to house "
+"the output. If not provided and 'keep' is not selected then the images will be "
+"sorted in-place, overwriting the original contents of the 'input_dir'"
+msgstr ""
+"排序对齐面的输出目录。如果未提供并选择了“keep”，则将在输入文件夹中创建一个名"
+"为“sorted”的新文件夹来容纳输出。如果未提供且未选择“保留”，则图像将就地排序，覆"
+"盖“input_dir”的原始内容"
+
+#: tools\sort\cli.py:111
+msgid ""
+"R|If selected then the input_dir should be a parent folder containing multiple "
+"folders of faces you wish to sort. The faces will be output to separate sub-"
+"folders in the output_dir"
+msgstr ""
+"R|如果选中，则input_dir应该是包含要排序的多个面孔文件夹的父文件夹。人脸将输出到"
+"output_dir中的单独子文件夹"
+
+#: tools\sort\cli.py:120
+msgid "sort settings"
+msgstr "排序设置"
+
+#: tools\sort\cli.py:122
+msgid ""
+"R|Choose how images are sorted. Selecting a sort method gives the images a new "
+"filename based on the order the image appears within the given method.\n"
+"L|'none': Don't sort the images. When a 'group-by' method is selected, selecting "
+"'none' means that the files will be moved/copied into their respective bins, but "
+"the files will keep their original filenames. Selecting 'none' for both 'sort-by' "
+"and 'group-by' will do nothing"
+msgstr ""
+"R|选择图像的排序方式。选择排序方法会根据图像在给定方法中的显示顺序为图像提供新的文"
+"件名。\n"
+"L|'none'：不要对图像进行排序。选择“分组依据”方法时，选择“无”意味着文件将被移动/复制"
+"到各自的垃圾箱中，但文件将保留其原始文件名。为“排序依据”和“分组依据”选择“无”将无任"
+"何操作"
+
+#: tools\sort\cli.py:135 tools\sort\cli.py:162 tools\sort\cli.py:191
+msgid "group settings"
+msgstr "组设置"
+
+#: tools\sort\cli.py:137
+msgid ""
+"R|Selecting a group by method will move/copy files into numbered bins based on the "
+"selected method.\n"
+"L|'none': Don't bin the images. Folders will be sorted by the selected 'sort-by' "
+"but will not be binned, instead they will be sorted into a single folder.  "
+"Selecting 'none' for both 'sort-by' and 'group-by' will do nothing"
+msgstr ""
+"R|选择分组依据方法将根据所选方法将文件移动/复制到编号的箱中。\n"
+"L|'none'：不要对图像进行装箱。文件夹将按选定的“排序方式”排序，但不会被装箱，而是将"
+"它们分类到单个文件夹中。 为“排序依据”和“分组依据”选择“无”将无任何操作"
+
+#: tools\sort\cli.py:149
+msgid ""
+"Whether to keep the original files in their original location. Choosing a 'sort-"
+"by' method means that the files have to be renamed. Selecting 'keep' means that "
+"the original files will be kept, and the renamed files will be created in the "
+"specified output folder. Unselecting keep means that the original files will be "
+"moved and renamed based on the selected sort/group criteria."
+msgstr ""
+"是否将原始文件保留在其原始位置。选择“排序依据”方法意味着必须重命名文件。选择“保"
+"留”意味着将保留原始文件，并在指定的输出文件夹中创建重命名的文件。取消选择 keep 意味"
+"着将根据所选的排序/分组条件移动和重命名原始文件。"
+
+#: tools\sort\cli.py:164
+msgid ""
+"R|Float value. Minimum threshold to use for grouping comparison with 'face-cnn' "
+"'hist' and 'face' methods.\n"
+"The lower the value the more discriminating the grouping is. Leaving -1.0 will "
+"allow Faceswap to choose the default value.\n"
+"L|For 'face-cnn' 7.2 should be enough, with 4 being very discriminating. \n"
+"L|For 'hist' 0.3 should be enough, with 0.2 being very discriminating. \n"
+"L|For 'face' between 0.1 (more bins) to 0.5 (fewer bins) should be about right.\n"
+"Be careful setting a value that's too extrene in a directory with many images, as "
+"this could result in a lot of folders being created. Defaults: face-cnn 7.2, hist "
+"0.3, face 0.25"
+msgstr ""
+"R|浮点值。用于与“face-cnn”“hist”和“face”方法进行分组比较的最低阈值。\n"
+"值越低，分组的区别性越强。离开 -1.0 将允许 Faceswap 选择默认值。\n"
+"L|对于“face-cnn”，7.2应该足够了，4是非常有区别的。\n"
+"L|对于“hist”，0.3应该足够了，0.2是非常有区别的。\n"
+"L|对于 0.1（更多箱）到 0.5（更少箱）之间的“面”应该差不多。\n"
+"在包含许多图像的目录中设置一个过于极端的值时要小心，因为这可能会导致创建大量文件"
+"夹。默认值：人脸 CNN 7.2，历史 0.3，人脸 0.25"
+
+#: tools\sort\cli.py:181
+msgid "output"
+msgstr "输出"
+
+#: tools\sort\cli.py:182
+msgid ""
+"Deprecated and no longer used. The final processing will be dictated by the sort/"
+"group by methods and whether 'keep_original' is selected."
+msgstr ""
+"已弃用，不再使用。最终处理将由排序/分组依据方法以及是否选择“keep_original”来决定。"
+
+#: tools\sort\cli.py:193
+#, python-format
+msgid ""
+"R|Integer value. Used to control the number of bins created for grouping by: any "
+"'blur' methods, 'color' methods or 'face metric' methods ('distance', 'size') and "
+"'orientation; methods ('yaw', 'pitch'). For any other grouping methods see the '-"
+"t' ('--threshold') option.\n"
+"L|For 'face metric' methods the bins are filled, according the the distribution of "
+"faces between the minimum and maximum chosen metric.\n"
+"L|For 'color' methods the number of bins represents the divider of the percentage "
+"of colored pixels. Eg. For a bin number of '5': The first folder will have the "
+"faces with 0%% to 20%% colored pixels, second 21%% to 40%%, etc. Any empty bins "
+"will be deleted, so you may end up with fewer bins than selected.\n"
+"L|For 'blur' methods folder 0 will be the least blurry, while the last folder will "
+"be the blurriest.\n"
+"L|For 'orientation' methods the number of bins is dictated by how much 180 degrees "
+"is divided. Eg. If 18 is selected, then each folder will be a 10 degree increment. "
+"Folder 0 will contain faces looking the most to the left/down whereas the last "
+"folder will contain the faces looking the most to the right/up. NB: Some bins may "
+"be empty if faces do not fit the criteria.\n"
+"Default value: 5"
+msgstr ""
+"R|整数值。用于控制为分组而创建的图格数量：任何“模糊”方法、“颜色”方法或“面部度量”方"
+"法（“距离”、“大小”）和“方向”;方法（“偏航”，“俯仰”）。对于任何其他分组方法，请参阅“-"
+"t”（“--threshold”）选项。\n"
+"L|对于“人脸度量”方法，根据所选最小和最大度量之间的人脸分布填充箱。\n"
+"L|对于“颜色”方法，条柱的数量表示彩色像素百分比的分频器。例如。对于箱号“5”：第一个文"
+"件夹将具有 0%% 到 20%% 彩色像素的人脸，第二个 21%% 到 40%%，依此类推。任何空垃圾箱"
+"都将被删除，因此您最终得到的垃圾箱可能会少于所选的垃圾箱。\n"
+"L|对于“模糊”方法，文件夹 0 将是最不模糊的，而最后一个文件夹将是最模糊的。\n"
+"L|对于“定向”方法，箱的数量由 180 度的划分决定。例如。如果选择 18，则每个文件夹将以 "
+"10 度为增量。文件夹 0 将包含向左/向下看最多的人脸，而最后一个文件夹将包含向右/向上"
+"看最多的人脸。注意：如果面不符合标准，某些箱可能是空的。\n"
+"默认值：5"
+
+#: tools\sort\cli.py:215 tools\sort\cli.py:225
+msgid "settings"
+msgstr "设置"
+
+#: tools\sort\cli.py:217
+msgid ""
+"Logs file renaming changes if grouping by renaming, or it logs the file copying/"
+"movement if grouping by folders. If no log file is specified  with '--log-file', "
+"then a 'sort_log.json' file will be created in the input directory."
+msgstr ""
+"如果通过重命名分组，则记录文件重命名更改，如果按文件夹分组，则记录文件复制/移动。如"
+"果没有使用 '--log-file' 指定日志文件，则将在输入目录中创建一个 'sort_log.json' 文"
+"件。"
+
+#: tools\sort\cli.py:228
+msgid ""
+"Specify a log file to use for saving the renaming or grouping information. If "
+"specified extension isn't 'json' or 'yaml', then json will be used as the "
+"serializer, with the supplied filename. Default: sort_log.json"
+msgstr ""
+"指定用于保存重命名或分组信息的日志文件。如果指定的扩展名不是“json”或“yaml”，则 "
+"json 将用作序列化程序，并提供文件名。默认值：sort_log.json"
